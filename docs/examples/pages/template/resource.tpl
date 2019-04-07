@@ -2,22 +2,22 @@
   .page-resource {
     padding-top: 55px;
     box-sizing: border-box;
-    
+
     .resource-placeholder {
       margin: 50px auto 100px;
       text-align: center;
-      
+
       img {
         width: 150px;
       }
-      
+
       h4 {
         margin: 20px 0 16px;
         font-size: 16px;
         color: #1f2f3d;
         line-height: 1;
       }
-      
+
       p {
         margin: 0;
         font-size: 14px;
@@ -95,7 +95,7 @@
       display: inline-block;
       line-height: 42px;
       font-size: 14px;
-      background-color: #409EFF;
+      background-color: #00C4C0;
       color: #fff;
       text-align: center;
       border: 0;
@@ -133,7 +133,7 @@
       <!--<h4><%= placeholder1 ></h4>-->
       <!--<p><%= placeholder2 ></p>-->
     <!--</div>-->
-    
+
     <p><%= placeholder2 ></p>
     <div class="cards">
       <ul class="container">
@@ -143,7 +143,7 @@
             <h3><%= 3 ></h3>
             <p><%= 4 ></p>
             <a
-              onclick="ga('send', 'event', 'ResourceDownload', 'Download', 'Axure');" 
+              onclick="ga('send', 'event', 'ResourceDownload', 'Download', 'Axure');"
               href="https://github.com/ElementUI/Resources/raw/master/Element_Components_v2.0.0.rplib"
             ><%= 5 ></a>
           </div>
@@ -153,7 +153,7 @@
             <img src="~examples/assets/images/Sketch-Template.svg" alt="">
             <h3><%= 6 ></h3>
             <p><%= 7 ></p>
-            <a 
+            <a
               onclick="ga('send', 'event', 'ResourceDownload', 'Download', 'Sketch');"
               href="https://github.com/ElementUI/Resources/raw/master/Element%20UI%20Kit_v2.0.sketch"
             ><%= 5 ></a>

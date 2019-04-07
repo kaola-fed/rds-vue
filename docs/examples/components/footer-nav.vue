@@ -22,38 +22,38 @@
     padding: 40px 0;
     color: #333;
     font-size: 14px;
-    
+
     &::after {
       content: '';
       display: block;
       clear: both;
     }
-     
+
     & i {
       transition: .3s;
       color: #999;
       vertical-align: baseline;
     }
   }
-  
+
   .footer-nav-link {
     cursor: pointer;
     transition: .3s;
-    
+
     &:hover {
-      color: #409EFF;
-     
+      color: #00C4C0;
+
       & i {
-        color: #409EFF;
+        color: #00C4C0;
       }
     }
   }
-  
+
   .footer-nav-left {
     float: left;
     margin-left: -4px;
   }
-  
+
   .footer-nav-right {
     float: right;
     margin-right: -4px;

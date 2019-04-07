@@ -1,0 +1,83 @@
+
+@include b(table) {
+    font-size: 12px;
+
+    @include e(header) {
+        border-bottom: 1px solid #E8E8E8;
+    }
+    /* 将 .el-table thead th 添加背景色，将多级表头的背景色修改
+    * 将表头的标题居中
+    *  表头加上分割线
+    */
+    thead tr th {
+        background-color: #f2f6ff !important;
+        text-align: center !important;
+        border-right: 1px solid #E5ECFC;
+        &.is-group {
+            th {
+                background: #f2f6ff;
+            }
+        }
+    }
+    thead .cell {
+        font-size: 12px;
+        color: #222222;
+        letter-spacing: 0;
+        line-height: 12px;
+        font-weight: 400;
+    }
+    /* 将table每行的高度修改为40 */
+    /* 将默认文字居中 */
+    td {
+        text-align: center;
+        padding: 11px 0;
+        @include when(left) {
+            text-align: left;
+        }
+    }
+    th {
+        @include when(left) {
+            text-align: center;
+        }
+        @include when(right) {
+            text-align: center;
+        }
+        @include when(center) {
+            text-align: center;
+        }
+    }
+    /* 将 斑马的背景色修改 */
+    @include m(striped) {
+        .el-table__body tr.el-table__row--striped td {
+            background: #f6f9fc;
+        }
+    }
+    /* 修改表格行上的hover颜色 */
+    @include m(enable-row-hover) {
+        .el-table__body tr:hover>td {
+            background-color: #ecf2f9;
+        }
+    }
+    /* 修改table行高 */
+    .cell {
+        color: #333;
+        line-height: 17px;
+        /* 让表格内的text按钮的高度缩小，不让其影响表格行高 */
+        .el-button.el-button--text {
+            padding: 0px;
+        }
+    }
+    /* 排序状态下的表头高度问题 */
+    .caret-wrapper {
+        height: 17px;
+    }
+    .sort-caret.ascending {
+        top: -3px;
+    }
+    .sort-caret.descending {
+        bottom: -2px;
+    }
+    th div {
+        line-height: normal;
+    }
+}

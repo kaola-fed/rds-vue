@@ -1,0 +1,59 @@
+/*样式覆盖*/
+@include b(select-dropdown) {
+    @include e(item) {
+        &.selected {
+            font-weight: 700;
+            color: #606266;
+            background-color: #e6f9f9;
+        }
+        /*下啦hover的背景色修改*/
+        &.hover,
+        &:hover {
+            background-color: #e6f9f9;
+        }
+    }
+    /*下拉选中时的字体颜色修改*/
+    &.is-multiple .el-select-dropdown__item.selected,
+    &.is-multiple .el-select-dropdown__item.selected.hover {
+        color: #606266;
+        background-color: #e6f9f9;
+    }
+}
+
+@include b(select) {
+    width: 100%;
+    .el-tag--info {
+        color: #909399;
+    }
+    @include m(miniW) {
+        width: 80px;
+    }
+    @include m(smallW) {
+        width: 160px;
+    }
+    @include m(mediumW) {
+        width: 300px;
+    }
+}
+/*样式覆盖*/
+// .el-select .el-input.is-focus .el-input__inner {
+//     border-color: #00C4C0;
+// }
+// .el-select .el-input__inner:focus {
+//     border-color: #00C4C0;
+// }
+// .el-select-dropdown__item.selected {
+//     font-weight: 700;
+//     color: #606266;
+//     background-color: #e6f9f9;
+// }
+/*下拉选中时的字体颜色修改*/
+// .el-select-dropdown.is-multiple .el-select-dropdown__item.selected,
+// .el-select-dropdown.is-multiple .el-select-dropdown__item.selected.hover {
+//     color: #606266;
+//     background-color: #e6f9f9;
+// }
+/*下啦hover的背景色修改*/
+// .el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+//     background-color: #e6f9f9;
+// }

@@ -131,7 +131,7 @@
       color: #d3dce6;
       cursor: pointer;
       position: relative;
-    
+
       &.is-fixed {
         position: fixed;
         bottom: 0;
@@ -157,7 +157,7 @@
       }
 
       &:hover {
-        color: #409EFF;
+        color: #00C4C0;
         background-color: #f9fafc;
       }
 
@@ -166,7 +166,7 @@
         opacity: 0;
         transform: translateX(10px);
       }
-      
+
       .control-button {
         line-height: 26px;
         position: absolute;

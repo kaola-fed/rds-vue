@@ -70,7 +70,7 @@
     overflow: hidden;
   }
   .avatar-uploader .el-upload:hover {
-    border-color: #409EFF;
+    border-color: #00C4C0;
   }
   .avatar-uploader-icon {
     font-size: 28px;

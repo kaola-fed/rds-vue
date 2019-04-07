@@ -1,0 +1,72 @@
+@include b(message) {
+    max-width: 350px;
+    min-width: 260px;
+    font-size: 12px;
+    border-radius: 4px;
+    background: #FFF;
+    border: 1px solid #E3E3E3;
+    padding: 12px 13px 11px 13px;
+    color: #777;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.07);
+    top: 10px;
+
+    @include e(content) {
+        font-size: 12px;
+        font-family: PingFangSC-Regular;
+        color: #666;
+        letter-spacing: 0;
+        text-align: left;
+        word-break: break-word;
+    }
+
+    @include m(info) {
+        .el-message__content {
+            color: #666666;
+        }
+    }
+
+    @include m(success) {
+        .el-message__content {
+            color: #666666;
+        }
+    }
+
+    @include m(warning) {
+        .el-message__content {
+            color: #666666;
+        }
+    }
+
+    @include m(error) {
+        .el-message__content {
+            color: #666666;
+        }
+    }
+}
+/*样式覆盖*/
+// .el-message {
+//     max-width: 350px;
+//     min-width: 260px;
+//     font-size: 12px;
+//     border-radius: 4px;
+//     background: #FFF;
+//     border: 1px solid #E3E3E3;
+//     padding: 12px 13px 11px 13px;
+//     color: #777;
+//     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.07);
+//     top: 10px;
+// }
+// .el-message__content {
+//     font-size: 12px;
+//     font-family: PingFangSC-Regular;
+//     color: #666;
+//     letter-spacing: 0;
+//     text-align: left;
+//     word-break: break-word;
+// }
+// .el-message--info .el-message__content,
+// .el-message--success .el-message__content,
+// .el-message--warning .el-message__content,
+// .el-message--error .el-message__content {
+//     color: #666666;
+// }

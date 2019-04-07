@@ -1,0 +1,51 @@
+@include b(tooltip) {
+    @include e(popper) {
+        &.is-dark {
+            max-width:250px;
+            padding:8px 10px;
+            margin:0;
+            text-align:left;
+            text-decoration:none;
+            background-color: rgba(64, 64, 64, 0.85);
+            border-radius:4px;
+            box-shadow:0 1px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        &[x-placement^=top] .popper__arrow {
+            border-top-color: rgba(64, 64, 64, 0.85);
+        }
+        &[x-placement^=left] .popper__arrow {
+            border-left-color: rgba(64, 64, 64, 0.85);
+        }
+        &[x-placement^=right] .popper__arrow {
+            border-right-color: rgba(64, 64, 64, 0.85);
+        }
+        &[x-placement^=bottom] .popper__arrow {
+            border-bottom-color: rgba(64, 64, 64, 0.85);
+        }
+    }
+}
+/*tooltip 样式覆盖*/
+// .el-tooltip__popper.is-dark {
+//     max-width:250px;
+//     padding:8px 10px;
+//     margin:0;
+//     text-align:left;
+//     text-decoration:none;
+//     background-color: rgba(64, 64, 64, 0.85);
+//     border-radius:4px;
+//     box-shadow:0 1px 6px rgba(0, 0, 0, 0.2);
+// }
+/*箭头 样式覆盖， 建议采用var变量方式，*/
+// .el-tooltip__popper[x-placement^=top] .popper__arrow {
+//     border-top-color: rgba(64, 64, 64, 0.85);
+// }
+// .el-tooltip__popper[x-placement^=left] .popper__arrow {
+//     border-left-color: rgba(64, 64, 64, 0.85);
+// }
+// .el-tooltip__popper[x-placement^=right] .popper__arrow {
+//     border-right-color: rgba(64, 64, 64, 0.85);
+// }
+// .el-tooltip__popper[x-placement^=bottom] .popper__arrow {
+//     border-bottom-color: rgba(64, 64, 64, 0.85);
+// }

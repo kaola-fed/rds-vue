@@ -43,7 +43,7 @@ router.afterEach(route => {
       return;
     }
   }
-  document.title = 'Element';
+  document.title = 'KlVue';
   ga('send', 'event', 'PageView', route.name);
 });
 

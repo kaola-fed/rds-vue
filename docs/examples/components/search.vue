@@ -59,7 +59,7 @@
     }
 
     .algolia-highlight {
-      color: #409EFF;
+      color: #00C4C0;
       font-weight: bold;
     }
 

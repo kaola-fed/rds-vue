@@ -34,6 +34,7 @@
         color: #333;
         text-decoration: none;
         display: block;
+        font-weight: 300;
       }
 
       span {
@@ -97,11 +98,11 @@
       list-style: none;
       position: relative;
       cursor: pointer;
-    
+
       &.nav-algolia-search {
         cursor: default;
       }
-    
+
       &.lang-item,
       &:last-child {
         cursor: default;
@@ -118,18 +119,18 @@
           color: #888;
 
           &:hover {
-            color: #409EFF;
+            color: #00C4C0;
           }
           &.active {
              font-weight: bold;
-             color: #409EFF;
+             color: #00C4C0;
            }
         }
       }
 
       a {
         text-decoration: none;
-        color: #1989FA;
+        color: #00C4C0;
         opacity: 0.5;
         display: block;
         padding: 0 22px;
@@ -147,7 +148,7 @@
           left: calc(50% - 15px);
           width: 30px;
           height: 2px;
-          background: #409EFF;
+          background: #00C4C0;
         }
       }
     }
@@ -182,7 +183,7 @@
 
     .is-active {
       span, i {
-        color: #409EFF;
+        color: #00C4C0;
       }
       i {
         transform: rotateZ(180deg) translateY(3px);
@@ -191,11 +192,11 @@
 
     &:hover {
       span, i {
-        color: #409EFF;
+        color: #00C4C0;
       }
     }
   }
-  
+
   .nav-dropdown-list {
     width: auto;
   }
@@ -215,7 +216,7 @@
         &:last-child {
           margin-left: 10px;
         }
-         
+
         a {
           padding: 0 5px;
         }
@@ -239,11 +240,11 @@
 
         &.lang-item {
           height: 100%;
-         
+
           .nav-lang {
             display: flex;
             align-items: center;
-            
+
             span {
               padding-bottom: 0;
             }
@@ -273,13 +274,16 @@
           <!-- logo -->
           <slot>
             <img
-              src="../assets/images/element-logo.svg"
+              src="//haitao.nos.netease.com/8f6c2273-57df-4c79-b714-4095502aa33b.svg"
+              width="60px"
               alt="element-logo"
               class="nav-logo">
             <img
-              src="../assets/images/element-logo-small.svg"
+              src="//haitao.nos.netease.com/8f6c2273-57df-4c79-b714-4095502aa33b.svg"
+              width="60px"
               alt="element-logo"
               class="nav-logo-small">
+            KlVue Suite Ms
           </slot>
 
         </router-link></h1>
@@ -288,30 +292,6 @@
         <ul class="nav">
           <li class="nav-item nav-algolia-search" v-show="isComponentPage">
             <algolia-search></algolia-search>
-          </li>
-          <li class="nav-item">
-            <router-link
-              active-class="active"
-              :to="`/${ lang }/guide`">{{ langConfig.guide }}
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link
-              active-class="active"
-              :to="`/${ lang }/component`">{{ langConfig.components }}
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link
-              active-class="active"
-              :to="`/${ lang }/resource`"
-              exact>{{ langConfig.resource }}
-            </router-link>
-          </li>
-
-          <!-- gap -->
-          <li class="nav-item" v-show="isComponentPage">
-            <div class="nav-gap"></div>
           </li>
 
           <!-- 版本选择器 -->
@@ -336,36 +316,6 @@
                 </el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
-          </li>
-
-          <!-- 语言选择器 -->
-          <li class="nav-item lang-item">
-            <el-dropdown
-              trigger="click"
-              class="nav-dropdown nav-lang"
-              :class="{ 'is-active': langDropdownVisible }">
-              <span>
-                {{ displayedLang }}
-                <i class="el-icon-arrow-down el-icon--right"></i>
-              </span>
-              <el-dropdown-menu
-                slot="dropdown"
-                class="nav-dropdown-list"
-                @input="handleLangDropdownToggle">
-                <el-dropdown-item
-                  v-for="(value, key) in langs"
-                  :key="key"
-                  @click.native="switchLang(key)">
-                  {{ value }}
-                </el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
-          </li>
-          
-          <!--theme picker-->
-          <li class="nav-item nav-theme-switch" v-show="isComponentPage">
-            <theme-configurator :key="lang" v-if="showThemeConfigurator"></theme-configurator>
-            <theme-picker v-else></theme-picker>
           </li>
         </ul>
       </div>
@@ -469,10 +419,10 @@
       };
       xhr.open('GET', '/versions.json');
       xhr.send();
-      let primaryLast = '#409EFF';
+      let primaryLast = '#00C4C0';
       bus.$on('user-theme-config-update', (val) => {
         let primaryColor = val.global['$--color-primary'];
-        if (!primaryColor) primaryColor = '#409EFF';
+        if (!primaryColor) primaryColor = '#00C4C0';
         const base64svg = 'data:image/svg+xml;base64,';
         const imgSet = document.querySelectorAll('h1 img');
         imgSet.forEach((img) => {

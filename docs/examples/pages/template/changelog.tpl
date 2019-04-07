@@ -17,7 +17,7 @@
       }
 
       &:hover a {
-        color: #409EFF;
+        color: #00C4C0;
       }
     }
 
@@ -87,7 +87,7 @@
           vertical-align: middle;
         }
       }
-  
+
       i {
         padding: 0 20px;
         display: inline-block;

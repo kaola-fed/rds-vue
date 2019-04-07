@@ -134,7 +134,7 @@ const generateMiscRoutes = function(lang) {
     path: `/${ lang }`, // 首页
     meta: { lang },
     name: 'home' + lang,
-    component: load(lang, 'index')
+    redirect: `/${ lang }/component`
   };
 
   return [guideRoute, resourceRoute, indexRoute];
@@ -151,7 +151,7 @@ route.push({
 });
 
 let userLanguage = localStorage.getItem('ELEMENT_LANGUAGE') || window.navigator.language || 'en-US';
-let defaultPath = '/en-US';
+let defaultPath = '/zh-CN';
 if (userLanguage.indexOf('zh-') !== -1) {
   defaultPath = '/zh-CN';
 } else if (userLanguage.indexOf('es') !== -1) {

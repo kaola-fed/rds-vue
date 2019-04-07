@@ -187,7 +187,7 @@
       height: 53px;
       line-height: 52px;
       font-size: 14px;
-      color: #409EFF;
+      color: #00C4C0;
       text-align: center;
       border: 0;
       border-top: 1px solid #eaeefb;
@@ -205,7 +205,7 @@
 
       &:hover {
         color: #fff;
-        background: #409EFF;
+        background: #00C4C0;
       }
     }
     &:hover {

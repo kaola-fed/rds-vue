@@ -1,0 +1,64 @@
+@include b(pagination) {
+    &.is-background {
+        .btn-next,
+        .btn-prev,
+        .el-pager li {
+            margin-right: 8px;
+            padding: 0 8px;
+            height: 30px;
+            min-width: 30px;
+            line-height: 28px;
+            color: #444;
+            border: 1px solid #D8D8D8;
+            border-radius: 2px;
+            font-weight: 400;
+            background: #fff;
+
+            &:not(.disabled):hover {
+                color: #444;
+                cursor: pointer;
+                border: 1px solid #bbb;
+            }
+
+            &:not(.disabled).active {
+                background: #00C4C0;
+                color: white;
+                border-color: #00C4C0;
+            }
+        }
+    }
+
+    @include e(sizes) {
+        height: 30px;
+        line-height: 30px;
+        .el-select .el-input .el-input__inner {
+            height: 30px;
+            line-height: 30px;
+        }
+    }
+}
+/*样式覆盖*/
+// .el-pagination.is-background .btn-next,
+// .el-pagination.is-background .btn-prev,
+// .el-pagination.is-background .el-pager li {
+//     margin-right: 8px;
+//     padding: 0 8px;
+//     height: 30px;
+//     min-width: 30px;
+//     line-height: 28px;
+//     color: #444;
+//     border: 1px solid #D8D8D8;
+//     border-radius: 2px;
+//     font-weight: 400;
+//     background: #fff;
+// }
+// .el-pagination.is-background .el-pager li:not(.disabled):hover {
+//     color: #444;
+//     cursor: pointer;
+//     border: 1px solid #bbb;
+// }
+// .el-pagination.is-background .el-pager li:not(.disabled).active {
+//     background: #00C4C0;
+//     color: white;
+//     border-color: #00C4C0;
+// }

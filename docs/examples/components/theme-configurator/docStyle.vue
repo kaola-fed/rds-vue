@@ -1,5 +1,5 @@
 <script>
-const ORIGINAL_THEME = '#409EFF';
+const ORIGINAL_THEME = '#00C4C0';
 import { get as ajaxGet } from './utils/ajax';
 import { updateDomHeadStyle } from './utils/utils.js';
 export default {

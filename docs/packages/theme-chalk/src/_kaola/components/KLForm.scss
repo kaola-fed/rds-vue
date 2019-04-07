@@ -1,0 +1,33 @@
+@include b(form) {
+    @include m(label-top) {
+        .el-form-item__label {
+            padding-bottom: 8px;
+            line-height: 17px;
+        }
+
+        .el-form-item__content {
+            line-height: 1;
+        }
+    }
+}
+@include b(form-item) {
+    margin-bottom: 16px;
+   
+    .el-select__tags {
+        padding: 2px; line-height: 32px;
+    }
+    @include e(content) {
+        line-height: 32px;
+    }
+    @include e(label) {
+        line-height: 1;
+        padding: 10px 12px 10px 0;
+        font-size: 12px;
+        color: #333;
+    }
+    @include m(mini) {
+        .el-form-item__label {
+            padding: 0 12px 0 0;
+        }
+    }
+}

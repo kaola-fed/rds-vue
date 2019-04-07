@@ -15,7 +15,7 @@
   .theme-picker .el-color-picker__trigger {
     vertical-align: middle;
   }
-  
+
   .theme-picker-dropdown .el-color-dropdown__link-btn {
     display: none;
   }
@@ -25,7 +25,7 @@
   import Element from 'main/index.js';
   const { version } = Element;
 
-  const ORIGINAL_THEME = '#409EFF';
+  const ORIGINAL_THEME = '#00C4C0';
   export default {
     data() {
       return {
