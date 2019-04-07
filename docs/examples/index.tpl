@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_137970_p1tpzmomxp9cnmi.css">
     <link rel='mask-icon' href="https://haitao.nos.netease.com/2c479bcc-3904-4110-95d4-0aba57f75740.ico">
     <link rel="stylesheet" href="//shadow.elemecdn.com/npm/highlight.js@9.3.0/styles/color-brewer.css">
-    <title>KlVue Suite</title>
+    <title>KlVue Suite Ms</title>
     <meta name="description" content="KlVue Suite Ms，考拉中后台开发套件解决方案" />
   </head>
   <body>

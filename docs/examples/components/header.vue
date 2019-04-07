@@ -130,13 +130,14 @@
 
       a {
         text-decoration: none;
-        color: #00C4C0;
+        color: #333;
         opacity: 0.5;
         display: block;
         padding: 0 22px;
 
         &.active,
         &:hover {
+          color: #00C4C0;
           opacity: 1;
         }
 
@@ -283,13 +284,39 @@
               width="60px"
               alt="element-logo"
               class="nav-logo-small">
-            KlVue Suite Ms
+            {{ title }}
           </slot>
 
         </router-link></h1>
 
         <!-- nav -->
         <ul class="nav">
+          <li class="nav-item">
+            <router-link
+              active-class="active"
+              :to="`/${ lang }/guide`">文档
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link
+              active-class="active"
+              :to="`/${ lang }/component`">模板
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link
+              active-class="active"
+              :to="`/${ lang }/resource`"
+              exact>套件
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link
+              active-class="active"
+              to="https://mms-kl.netease.com/"
+              exact>物料
+            </router-link>
+          </li>
           <li class="nav-item nav-algolia-search" v-show="isComponentPage">
             <algolia-search></algolia-search>
           </li>
@@ -323,7 +350,8 @@
           'es': 'Español',
           'fr-FR': 'Français'
         },
-        showThemeConfigurator: false
+        showThemeConfigurator: false,
+        title: window.docTitle
       };
     },
 

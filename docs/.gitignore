@@ -22,3 +22,11 @@ coverage
 waiter.config.js
 build/bin/algolia-key.js
 .envrc
+
+examples/components/header.vue
+examples/components/demo-block.vue
+examples/components/footer.vue
+examples/components/footer-nav.vue
+examples/components/search.vue
+examples/components/side-nav.vue
+examples/components/theme-picker.vue
