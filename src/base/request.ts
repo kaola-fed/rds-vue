@@ -8,39 +8,37 @@ const JSONAXIOS = axios.create({
   timeout: 50000,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
-    'Content-Type': 'application/json;charset=utf-8'
+    'Content-Type': 'application/json;charset=utf-8',
   },
-  transformRequest: [function(data) {
-    return JSON.stringify(_.filterEmpty(data));
-  }],
+  transformRequest: [data => JSON.stringify(_.filterEmpty(data))],
   paramsSerializer(params) {
     return qs.stringify(_.filterEmpty(params));
-  }
+  },
 });
 
 const FORMAXIOS = axios.create({
   timeout: 50000,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
-    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
   },
-  transformRequest: [function(data) {
-    return qs.stringify(_.filterEmpty(data), {arrayFormat: 'repeat'});
-  }]
+  transformRequest: [data => qs.stringify(_.filterEmpty(data), { arrayFormat: 'repeat' })],
 });
 
 const FORMDATAAXIOS = axios.create({
   timeout: 50000,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
-    'Content-Type': 'multipart/form-data'
-  }
+    'Content-Type': 'multipart/form-data',
+  },
 });
 
 function __responseSuccessInterceptor(response: any) {
-  const data = response.data;
+  const { data } = response;
   if (data && data.code >= 200 && data.code < 400) {
-    data.message && Message.success(data.message);
+    if (data.message) {
+      Message.success(data.message);
+    }
     return Promise.resolve(data);
   }
 
@@ -48,8 +46,14 @@ function __responseSuccessInterceptor(response: any) {
   err.name = '后端请求错误';
 
   const { handleRequestError = null } = Vue.klvue || {};
-  handleRequestError && handleRequestError(data, err);
-  data.message && Message.error(data.message);
+
+  if (handleRequestError) {
+    handleRequestError(data, err);
+  }
+
+  if (data.message) {
+    Message.error(data.message);
+  }
   return Promise.reject(data);
 }
 

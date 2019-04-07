@@ -4,7 +4,6 @@ import { Vue, Component, Prop } from 'vue-property-decorator';
   name: 'kl-text',
 })
 export default class KLText extends Vue {
-
   @Prop()
   private content!: any;
 
@@ -29,7 +28,7 @@ export default class KLText extends Vue {
       'text-overflow': 'ellipsis',
       '-webkit-line-clamp': this.row,
       'line-height': this.lineHeight,
-      'overflow-wrap': 'break-word'
+      'overflow-wrap': 'break-word',
     };
   }
 }

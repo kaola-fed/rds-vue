@@ -1,4 +1,4 @@
-import {Vue} from "vue/types/vue";
+import 'vue/types/vue.d.ts';
 
 declare module 'vue/types/vue' {
   interface VueConstructor<V extends Vue = Vue> {

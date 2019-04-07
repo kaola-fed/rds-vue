@@ -23,7 +23,9 @@ export default class ListMixin extends Vue {
   private loading: boolean = false;
 
   private mounted() {
-    this.shouldUpdateList() && this.__getList();
+    if (this.shouldUpdateList()) {
+      this.__getList();
+    }
   }
 
   private shouldUpdateList() {
@@ -50,7 +52,7 @@ export default class ListMixin extends Vue {
       this.loading = true;
       const param = this.getListParam();
       const data = await this.listService(_.filterEmpty(param));
-      const result = data && data.result || data.data || {};
+      const result = data && (data.result || data.data || {});
       this.list = (result && result.list) || (result instanceof Array && result) || [];
       this.total = (result.pagination && result.pagination.total) || result.total;
 
@@ -70,7 +72,7 @@ export default class ListMixin extends Vue {
   private getListParam() {
     const param = this.getExtraParam();
     const { pageNo, pageSize } = this;
-    return {...param, pageNo, pageSize };
+    return { ...param, pageNo, pageSize };
   }
 
   private getExtraParam() {
@@ -97,7 +99,7 @@ export default class ListMixin extends Vue {
   handleSelectionChange(selected: any[]) {
     this.selectedIds = [];
     this.selecteds = [];
-    selected.map((x) => {
+    selected.forEach((x) => {
       this.selecteds.push(x);
       this.selectedIds.push(x.id);
     });

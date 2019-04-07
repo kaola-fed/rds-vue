@@ -11,6 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "outDir": "./ts.out",
     "types": [
       "webpack-env",
       "mocha",

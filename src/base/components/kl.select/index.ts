@@ -4,7 +4,6 @@ import { Vue, Component, Prop } from 'vue-property-decorator';
   name: 'kl-select',
 })
 export default class KLDivider extends Vue {
-
   // 下拉列表
   @Prop({ type: Array, default: () => [] })
   private source!: any[];

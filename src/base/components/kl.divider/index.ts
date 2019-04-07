@@ -4,7 +4,6 @@ import { Vue, Component, Prop } from 'vue-property-decorator';
   name: 'kl-divider',
 })
 export default class KLDivider extends Vue {
-
   /* 分割线类型 horizontal/vertical */
   @Prop({ type: String, default: 'horizontal' })
   private type!: string;

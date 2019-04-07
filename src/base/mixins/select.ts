@@ -25,11 +25,11 @@ export default class AuthMixin extends Vue {
 
     try {
       const keys = sourceKeys.join(',');
-      let res: any = await JSONAPI.get(selectUrl(), { params: {keys} });
-      res = res && res.result || res.data || {};
+      let res: any = await JSONAPI.get(selectUrl(), { params: { keys } });
+      res = res && (res.result || res.data || {});
 
       sourceKeys.forEach((key) => {
-        let result = res[`${key}`] || [];
+        const result = res[`${key}`] || [];
         this.$set(this.source, key, [...result]);
       });
 

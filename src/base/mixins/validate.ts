@@ -21,7 +21,7 @@ export default class AuthMixin extends Vue {
   private validate() {
     // override this method if needed
     return new Promise((resolve) => {
-      resolve({valid: true});
+      resolve({ valid: true });
     });
   }
 }
