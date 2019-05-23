@@ -1,0 +1,86 @@
+@include b(step) {
+    @include e(title) {
+        font-size: 14px;
+        &.is-finish,
+        &.is-success,
+        &.is-process {
+            color: #00C4C0;
+            font-weight: normal;
+        }
+    }
+
+    @include e(head) {
+        &.is-finish,
+        &.is-success,
+        &.is-process {
+            color: #00C4C0;
+            border-color: #00C4C0;
+        }
+    }
+
+    &.is-horizontal .el-step__line {
+        top: 14px;
+        height: 4px;
+    }
+    &.is-vertical .el-step__line {
+        left: 14px;
+        width: 4px;
+    } 
+    @include e(icon) {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    @include e(line-inner) {
+        border-width: 2px !important;
+    }
+}
+.is-finish .el-step__icon,
+.is-success .el-step__icon {
+    background: #00c4c0;
+    color: #fff;
+}
+/*字体修噶*/
+// .el-step__title {
+//     font-size: 14px;
+// }
+/*颜色修改*/
+// .el-step__head.is-process {
+//     color: #00C4C0;
+//     border-color: #00C4C0;
+// }
+// .el-step__title.is-process {
+//     color: #00C4C0;
+//     font-weight: normal;
+// }
+// .el-step__title.is-success,
+// .el-step__title.is-finish {
+//     color: #00C4C0;
+// }
+// .el-step__head.is-success,
+// .el-step__head.is-finish {
+//     color: #00C4C0;
+//     border-color: #00C4C0;
+// }
+// .el-step__description.is-finish {
+//     color: #00C4C0;
+// }
+
+/*修改默认大小*/
+// .el-step.is-horizontal .el-step__line {
+//     top: 14px;
+//     height: 4px;
+// }
+// .el-step__icon {
+//     width: 32px;
+//     height: 32px;
+//     font-size: 16px;
+// }
+// .el-step.is-vertical .el-step__line {
+//     left: 14px;
+//     width: 4px;
+// }
+// .el-step__line-inner {
+//     border-width: 2px !important;
+// }

@@ -1,0 +1,66 @@
+@include b(breadcrumb) {
+    font-size: 12px;
+    line-height: 40px;
+    @include e(inner) {
+        a,
+        &.is-link {
+            font-weight: 400;
+            color: #333;
+        }
+    }
+
+    @include e(item) {
+        &:last-child {
+            .el-breadcrumb__inner,
+            .el-breadcrumb__inner a {
+                font-weight: 700;
+                color: #333;
+            }
+        }
+
+        &:first-child {
+            .el-breadcrumb__inner,
+            .el-breadcrumb__inner a,
+            .el-breadcrumb__inner a:hover,
+            .el-breadcrumb__inner:hover {
+                font-weight: 400;
+                color: #21D1C8;
+            }
+        }
+    }
+
+    @include e(inner) {
+        a:hover,
+        &.is-link:hover,
+        &:last-child .el-breadcrumb__inner a:hover,
+        &:last-child .el-breadcrumb__inner:hover {
+            font-weight: 700;
+            color: #21D1C8;
+        }
+    }
+}
+/*样式覆盖*/
+// .el-breadcrumb__inner a,
+// .el-breadcrumb__inner.is-link {
+//     font-weight: 400;
+//     color: #606266;
+// }
+// .el-breadcrumb__item:last-child .el-breadcrumb__inner,
+// .el-breadcrumb__item:last-child .el-breadcrumb__inner a {
+//     font-weight: 700;
+//     color: #303133;
+// }
+// .el-breadcrumb__item:first-child .el-breadcrumb__inner,
+// .el-breadcrumb__item:first-child .el-breadcrumb__inner a,
+// .el-breadcrumb__item:first-child .el-breadcrumb__inner a:hover,
+// .el-breadcrumb__item:first-child .el-breadcrumb__inner:hover {
+//     font-weight: 400;
+//     color: #21D1C8;
+// }
+// .el-breadcrumb__inner a:hover,
+// .el-breadcrumb__inner.is-link:hover,
+// .el-breadcrumb__item:last-child .el-breadcrumb__inner a:hover,
+// .el-breadcrumb__item:last-child .el-breadcrumb__inner:hover {
+//     font-weight: 700;
+//     color: #21D1C8;
+// }

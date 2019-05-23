@@ -1,0 +1,121 @@
+@include b(menu) {
+    height: 100%;
+    .el-menu-item-group {
+        background-color: #f6f9fc;
+    }
+
+    @include m(dark) {
+        color: rgba(255, 255, 255, 0.65);
+        background-color: #222;
+
+        .el-submenu .el-submenu__title {
+            color: rgba(255, 255, 255, 0.65);
+            background-color: #222;
+            i {
+                color: rgba(255, 255, 255, 0.65);
+            }
+            &:hover {
+                background-color: #222;
+                color: #fff;
+                i {
+                    color: #fff;
+                }
+            }
+        }
+        .el-submenu.is-opened .el-submenu__title {
+            color: #fff;
+        }
+        .el-menu--inline {
+            .el-menu-item-group,
+            .el-menu-item {
+                color: rgba(255, 255, 255, 0.65);
+                background-color: #111;
+                &.is-active {
+                    color: #fff;
+                    background-color: #28c4c0;
+                    &:hover {
+                        color: #fff;
+                        background-color: #28c4c0;
+                    }
+                }
+                &:hover {
+                    color: #fff;
+                    background-color: #111;
+                }
+                &:focus {
+                    outline: 0;
+                    color: #fff;
+                    background-color: #28c4c0;
+                }
+            }
+        }
+    }
+    @include m(horizontal) {
+        .el-submenu.is-active .el-submenu__title {
+            color: #fff;
+        }
+        .el-submenu .el-submenu__title {
+            height: 48px;
+            line-height: 48px;
+        }
+        .el-menu-item:not(.is-disabled):hover, 
+        .el-menu-item:not(.is-disabled):focus,
+        .el-menu-item:not(.is-active):hover,
+        .el-menu-item:not(.is-active):focus {
+            outline: none;
+            color: #00C4C0;
+        }
+      
+        .el-menu .el-menu-item.is-active, 
+        .el-menu .el-submenu.is-active > .el-submenu__title {
+            background-color: #00C4C0;
+            color: #303133;
+        }
+    }
+}
+
+@include b(submenu) {
+    .el-menu-item {
+        height: 40px;
+        line-height: 40px;
+        background-color: #f6f9fc;
+    }
+
+    @include e(title) {
+        height: 54px;
+        line-height: 54px;
+        color: #333;
+        font-size: 14px;
+        i {
+            color: #333;
+            font-size: 15px;
+        }
+        &:hover {
+            background-color: #fff;
+            color: #00C4C0;
+            i {
+                color: #00C4C0;
+            }
+        }
+    }
+}
+@include b(menu-item) {
+    height: 54px;
+    line-height: 54px;
+    color: #333;
+    text-indent: 10px;
+    font-size: 12px;
+    &.is-active {
+        font-size: 14px;
+        color: #fff;
+        background-color: #00C4C0;
+        &:hover {
+            color: #fff;
+            background-color: #00C4C0;
+        }
+    }
+    &:hover {
+        color: #00C4C0;
+        background-color: #f6f9fc;
+    }
+}

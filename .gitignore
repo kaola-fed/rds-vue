@@ -1,0 +1,9 @@
+node_modules
+.docker
+.docs
+.rde
+.tmp
+.vscode/
+.idea/
+.cache/
+runtime
