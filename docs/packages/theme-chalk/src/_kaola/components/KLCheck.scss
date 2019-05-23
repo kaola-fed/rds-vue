@@ -1,0 +1,26 @@
+@include b(checkbox) {
+    @include e(input) {
+        /*label样式覆盖*/
+        &.is-checked+.el-checkbox__label {
+            color: #333;
+        }
+        /*半选状态样式覆盖*/
+        &.is-indeterminate .el-checkbox__inner::before {
+            height: 4px;
+            top: 4px;
+        }
+    }
+    @include e(label) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    /*半选状态样式覆盖*/
+    @include e(inner) {
+        &::after {
+            border: 2px solid #fff;
+            top: 0px;
+            border-left: 0;
+            border-top: 0;
+        }
+    }
+}

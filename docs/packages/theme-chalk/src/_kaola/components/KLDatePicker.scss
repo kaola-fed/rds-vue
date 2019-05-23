@@ -1,0 +1,50 @@
+
+@include b(picker-panel) {
+    color: #333;
+}
+/*时间选择的一些状态样式覆盖*/
+@include b(date-table) {
+    th {
+        padding: 2px;
+    }
+    td.today span {
+        color: #333;
+    }
+    td.available:hover span {
+        background: #80e2e0;
+        color: #444;
+    }
+    td span {
+        border-radius: 2px;
+    }
+}
+/*时间下拉框的大小*/
+@include b(date-picker) {
+    width: 260px;
+    &.has-sidebar {
+        width: 370px;
+    }
+    table {
+        width: 250px;
+        margin: 0 5px;
+    }
+    .el-picker-panel__content {
+        width: 260px;
+        margin: 0px;
+    }
+}
+
+@include b(date-editor) {
+    .el-range__close-icon,
+    .el-range__icon {
+        line-height: 24px;
+    }
+    .el-range-separator {
+        line-height: 26px;
+        width: 8%;
+    }
+    &.el-input,
+    &.el-input__inner {
+        width: 100%;
+    }
+}

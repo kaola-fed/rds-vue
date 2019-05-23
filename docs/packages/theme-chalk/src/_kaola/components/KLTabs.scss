@@ -1,0 +1,73 @@
+@include b(tabs) {
+    @include e(item) {
+        box-sizing: border-box;
+        position: relative;
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        min-width: 104px;
+        padding: 0 15px;
+        font-size: 12px;
+        color: #333;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    @include m(card) {
+        & > .el-tabs__header {
+            .el-tabs__nav {
+                border: none;
+            }
+            .el-tabs__item {
+                border: 1px solid #D9D9D9;
+                &:first-child {
+                    border-left: 1px solid #D9D9D9;
+                }
+            }
+        } 
+        .el-tabs__item {
+            margin-right: 2px;
+            border: 1px solid #D9D9D9;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            background: #FAFAFA;
+            &.is-active {
+                background: #fff;
+            }
+        }
+    }
+}
+/*tabs样式覆盖*/
+// .el-tabs__item {
+//     box-sizing: border-box;
+//     position: relative;
+//     display: inline-block;
+//     height: 40px;
+//     line-height: 40px;
+//     min-width: 104px;
+//     padding: 0 15px;
+//     font-size: 12px;
+//     color: #333;
+//     text-align: center;
+//     cursor: pointer;
+// }
+/*card 样式修改*/
+// .el-tabs--card>.el-tabs__header .el-tabs__nav {
+//     border: none;
+// }
+// .el-tabs--card>.el-tabs__header .el-tabs__item {
+//     border: 1px solid #D9D9D9;
+// }
+// .el-tabs--card>.el-tabs__header .el-tabs__item:first-child {
+//     border-left: 1px solid #D9D9D9;
+// }
+// .el-tabs--card .el-tabs__item {
+//     margin-right: 2px;
+//     border: 1px solid #D9D9D9;
+//     border-bottom: none;
+//     border-radius: 4px 4px 0 0;
+//     background: #FAFAFA;
+// }
+// .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+//     background: #fff;
+// }

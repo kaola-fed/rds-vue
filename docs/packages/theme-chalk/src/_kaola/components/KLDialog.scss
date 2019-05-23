@@ -1,0 +1,21 @@
+@include b(dialog) {
+    border-radius: 0px;
+    padding-bottom: 0px;
+
+    @include e(header) {
+        padding: 15px 16px;
+        border-bottom: 1px solid #eee;
+    }
+
+    @include e(title) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @include e(footer) {
+        padding: 10px 15px;
+        text-align: right;
+        border-top: 1px solid #e3e3e3;
+        font-size: 0;
+    }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "klvue-suite-ms",
+  "version": "0.0.1",
+  "scripts": {
+    "serve": "vue-cli-service serve src/dev.tsx",
+    "build": "vue-cli-service build --target=lib src/index.ts",
+    "lint": "vue-cli-service lint",
+    "lint:fix": "vue-cli-service lint --fix",
+    "test:unit": "vue-cli-service test:unit",
+    "commitmsg": "validate-commit-msg"
+  },
+  "dependencies": {
+    "@types/qs": "^6.5.2",
+    "@types/vue": "^2.0.0",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0-beta.3",
+    "@vue/babel-preset-jsx": "^1.0.0-beta.3",
+    "axios": "^0.18.0",
+    "core-js": "^2.6.5",
+    "element-ui": "^2.7.2",
+    "moment": "^2.24.0",
+    "qs": "^6.7.0",
+    "vue": "^2.6.6",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^5.2.4",
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-plugin-typescript": "^3.5.0",
+    "@vue/cli-plugin-unit-mocha": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.1.2",
+    "commitizen": "^3.0.7",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.4",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "style-resources-loader": "^1.2.1",
+    "typescript": "^3.2.1",
+    "validate-commit-msg": "^2.14.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "test/*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
