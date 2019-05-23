@@ -10,7 +10,7 @@ import BaseComponents from './components/base';
 import { JSONAPI, FORMAPI, FORMDATAAPI } from './request';
 import Utils from './utils';
 
-import '@/style/index.scss';
+import './styles/index.scss';
 
 export default {
   AuthMixin,
