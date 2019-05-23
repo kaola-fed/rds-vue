@@ -1,8 +1,0 @@
-
-/*样式颜色覆盖*/
-.is-focusable .el-tree-node__content:hover,
-.is-focusable .el-tree-node:focus>.el-tree-node__content,
-.is-focusable .el-tree-node.is-current > .el-tree-node__content,
-.el-tree-node:focus > .el-tree-node__content {
-    background-color: #e6f9f9;
-}

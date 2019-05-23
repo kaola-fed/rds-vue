@@ -1,29 +1,29 @@
-import AuthMixin from './mixins/auth';
-import ListMixin from './mixins/list';
-import SelectMixin from './mixins/select';
-import ValidateMixin from './mixins/validate';
+// import AuthMixin from './mixins/auth';
+// import ListMixin from './mixins/list';
+// import SelectMixin from './mixins/select';
+// import ValidateMixin from './mixins/validate';
 
-import Filters from './filters';
-import Directives from './directives';
-import BaseComponents from './components/base';
+// import Filters from './filters';
+// import Directives from './directives';
+// import BaseComponents from './components/base';
 
-import { JSONAPI, FORMAPI, FORMDATAAPI } from './request';
-import Utils from './utils';
+// import { JSONAPI, FORMAPI, FORMDATAAPI } from './request';
+// import Utils from './utils';
 
-import './styles/index.scss';
+// import './styles/index.scss';
 
-export default {
-  AuthMixin,
-  ListMixin,
-  SelectMixin,
-  ValidateMixin,
+// export default {
+//   AuthMixin,
+//   ListMixin,
+//   SelectMixin,
+//   ValidateMixin,
 
-  Filters,
-  Directives,
-  BaseComponents,
+//   Filters,
+//   Directives,
+//   BaseComponents,
 
-  JSONAPI,
-  FORMAPI,
-  FORMDATAAPI,
-  Utils,
-};
+//   JSONAPI,
+//   FORMAPI,
+//   FORMDATAAPI,
+//   Utils,
+// };
