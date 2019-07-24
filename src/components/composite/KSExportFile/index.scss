@@ -1,0 +1,10 @@
+@import "@/styles/mixins/index.scss";
+
+@include b(export-confirm) {
+  @include e(item) {
+    margin-bottom: 20px;
+  }
+}
+@include b(export-range) {
+  margin-top: 20px;
+}
