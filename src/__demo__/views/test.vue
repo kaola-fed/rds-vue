@@ -39,23 +39,6 @@
         <p class="f-mt20">单选模式二： 记录选中节点的路径</p>
         <ks-tree-select :source="source" v-model="value8" mode="normal" :multiple=false />
 
-        <p class="f-mt20">el-cascader实现单选，模式一：选择任意级</p>
-        <el-cascader filterable clearable
-          v-model="value4"
-          expand-trigger="hover"
-          :change-on-select=true
-          :options="source"
-          :props="{value: 'id', label: 'name'}">
-        </el-cascader>
-
-        <p class="f-mt20">el-cascader实现单选，模式二：仅允许选择末级</p>
-        <el-cascader filterable clearable
-          v-model="value5"
-          expand-trigger="hover"
-          :options="source"
-          :props="{value: 'id', label: 'name'}">
-        </el-cascader>
-
         <div class="f-mt20">
           <p>测试指令用</p>
           <el-form ref="form" :model="obj" :rules="rules">
@@ -654,9 +637,6 @@ export default {
 };
 </script>
 <style lang="scss">
-
-/* 引入bem mixin */
-@import "@/styles/mixins/index.scss";
 
 @include b(header-detail) {
     @include e(style) {

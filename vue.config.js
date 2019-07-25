@@ -19,14 +19,12 @@ module.exports = {
   },
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === 'production') {
-      return {
-        externals: {
-          vue: {
-            root: 'Vue',
-            commonjs: 'vue',
-            commonjs2: 'vue',
-            amd: 'vue',
-          },
+      config.externals = {
+        vue: {
+          root: 'Vue',
+          commonjs: 'vue',
+          commonjs2: 'vue',
+          amd: 'vue',
         },
       };
     }

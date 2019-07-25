@@ -13,6 +13,7 @@ import {
   Icon,
   Input,
   Main,
+  Message,
   Option,
   Progress,
   Row,
@@ -25,7 +26,7 @@ import {
   Table,
   TableColumn,
   Tooltip,
-  Tree
+  Tree,
 } from 'element-ui';
 import 'element-kaola/index.scss';
 import './styles/index.scss';
@@ -74,6 +75,7 @@ export default {
     Vue.use(TableColumn);
     Vue.use(Tooltip);
     Vue.use(Tree);
+    Vue.prototype.$message = Message;
     Vue.use(BaseComponents);
     Vue.use(CompositeComponents);
     Vue.use(Filters);

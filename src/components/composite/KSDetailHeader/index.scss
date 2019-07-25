@@ -1,6 +1,3 @@
-
-@import '@/styles/mixins/index.scss';
-
 @include b(header) {
   position: sticky;
   top: 40px;
