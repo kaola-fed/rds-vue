@@ -19,17 +19,17 @@ import 'rds-vue/dist/rdsvue.css';
 rdsVue.install(Vue, {
     // 传入项目级配置
     selectUrl() {
-        return './test'; // 返回字符串类型
+        return './test'; // 通用下拉url配置函数，需返回字符串类型
     },
     resolveCommonReturn(res) {
-        // 处理通用下拉接口返回，详细使用见KSSelectMixin
+        // 处理通用下拉接口的返回函数，更多使用可参见KSSelectMixin
     },
     remoteSelectUrl() {
-        return '/remote'; // 返回字符串类型
+        return '/remote'; // 远程搜索下拉组件的通用url配置函数，需返回字符串类型
     },
-    authUrl: '' // 系统级的获取权限接口，详细使用情况可参见KSAuthMixin文档
+    authUrl: '' // 系统级的获取权限接口，更多使用可参见KSAuthMixin文档
     transferAuthResult() {
-        // 权限接口返回值处理函数，详细使用情况可参见KSAuthMixin文档
+        // 权限接口返回值的处理函数，更多使用可参见KSAuthMixin文档
     }
 })
 ```
