@@ -28,8 +28,11 @@ export default class KsImportFile extends Vue {
   @Prop({ type: Boolean, default: false })
   public visible!: boolean;
 
-  @Prop({ type: Function, default: res => res })
+  @Prop({ type: Function, default: res => (res.data || res.result || {}) })
   public onLoadInterceptor!: any;
+
+  @Prop({ type: String, default: 'resultUrl' })
+  public urlKey!: string;
 
   /* data */
   public status: string = 'init';
@@ -161,7 +164,7 @@ export default class KsImportFile extends Vue {
     } else {
       this.status = 'fail';
       this.resultMessage = res.message || '导入失败，请检查文档内容，修改后重新导入';
-      this.resultUrl = data.resultUrl || data.url || res.resultUrl;
+      this.resultUrl = res[this.urlKey] || data.url || data[this.urlKey];
     }
   }
 
