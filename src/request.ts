@@ -11,7 +11,7 @@ const JSONAXIOS = axios.create({
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
     'Content-Type': 'application/json;charset=utf-8',
-    'secret-key': secretKey
+    'secret-key': secretKey,
   },
   transformRequest: [data => JSON.stringify(filterEmpty(data))],
   paramsSerializer(params) {

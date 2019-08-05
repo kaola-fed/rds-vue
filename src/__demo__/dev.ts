@@ -11,10 +11,10 @@ import routes from './routes';
 
 RdsVue.install(Vue, {
   selectUrl() {
-    return '/api/test';
+    return 'https://api.jsonbin.io/b/5d48498f89ed890b24cc2d3a';
   },
   remoteSelectUrl() {
-    return '/api/test';
+    return 'https://api.jsonbin.io/b/5d48501e77bd85336aa82139';
   },
 });
 

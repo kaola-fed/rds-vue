@@ -5,8 +5,8 @@
         <el-form-item label="原有用法">
           <ks-select :source="source"/>
         </el-form-item>
-        <el-form-item label="固定key: sourceKey">
-          <ks-select source-key="sourceKey"/>
+        <el-form-item label="固定key: test">
+          <ks-select source-key="test"/>
         </el-form-item>
         <el-form-item :label="`动态key: ${firstKey}`">
           <ks-select :source-key="firstKey"/>
@@ -31,7 +31,7 @@
 export default {
   data() {
     return {
-      firstKey: 'test',
+      firstKey: 'first',
       keys: [],
       source: [{ id: 1, name: 'name' }],
     };
