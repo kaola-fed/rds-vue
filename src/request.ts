@@ -4,11 +4,14 @@ import Vue from 'vue';
 import { Message } from 'element-ui';
 import { filterEmpty } from './utils';
 
+const secretKey = '$2a$10$KfqTAwzvSEWyxDDXejMcJOEK.Etikne2gReHgi76csKakDWxKUopS';
+
 const JSONAXIOS = axios.create({
   timeout: 50000,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
     'Content-Type': 'application/json;charset=utf-8',
+    'secret-key': secretKey
   },
   transformRequest: [data => JSON.stringify(filterEmpty(data))],
   paramsSerializer(params) {
