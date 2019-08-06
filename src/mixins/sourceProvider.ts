@@ -36,13 +36,10 @@ export default class SourceProviderMixin extends Vue {
   }
 
   get computedSource() {
-    if (this.source) {
-      return this.source;
-    }
     if (this.sourceKey && this.provideSources && this.provideSources[this.sourceKey]) {
       return this.provideSources[this.sourceKey];
     }
-    return [];
+    return this.source;
   }
 
   created() {
