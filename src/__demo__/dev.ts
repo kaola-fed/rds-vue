@@ -20,6 +20,7 @@ RdsVue.install(Vue, {
 
 Vue.use(VueRouter);
 const router = new VueRouter({
+  mode: 'history',
   routes,
 });
 /* eslint-disable no-new */

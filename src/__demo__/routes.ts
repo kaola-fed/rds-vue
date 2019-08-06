@@ -3,6 +3,7 @@ import test from './views/test.vue';
 import cascader from './views/cascader.vue';
 import sourceProvider from './views/sourceProvider.vue';
 import upload from './views/upload.vue';
+import authProvider from './views/authProvider.vue';
 
 export default [
   {
@@ -29,5 +30,10 @@ export default [
     name: 'upload',
     path: '/upload',
     component: upload,
+  },
+  {
+    name: 'authProvider',
+    path: '/authProvider',
+    component: authProvider,
   },
 ];

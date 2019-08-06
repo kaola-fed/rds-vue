@@ -28,6 +28,7 @@ export default class KsAuthProvider extends KsBaseProvider {
   async created() {
     const { urlKey } = this;
     const authUrls = this.authMaps.get(window.location.pathname);
+    console.log(authUrls);
     if (!authUrls) {
       return;
     }

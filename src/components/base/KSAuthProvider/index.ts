@@ -29,24 +29,22 @@ export default class KsAuthProvider extends KsBaseProvider {
   private authMaps = new Map<string, Map<string, AuthItem>>();
 
   @Prop({ type: String, default: '' })
-  private authUrl = '';
+  private authUrl;
 
-  @Prop({ type: Array, default: () => [] })
-  private authParam: AuthParam[] = [];
+  @Prop({ type: Array, default: (): AuthParam[] => [] })
+  private authParam;
 
   @Prop({ type: String, default: '' })
-  private dataAuthUrl = '';
+  private dataAuthUrl;
 
   @Prop({ type: Object })
   private dataAuthParam: any;
 
   @Prop({ type: String })
-  private unauthorizedUrl = '';
+  private unauthorizedUrl;
 
-  @Prop({ type: Function, default: v => v })
-  private transferAuthResult(value): AuthItem[] {
-    return value;
-  }
+  @Prop({ type: Function, default: (v):AuthItem[] => v })
+  private transferAuthResult;
 
   @Emit('ready')
   onReady(authUrls) {
