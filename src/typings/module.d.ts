@@ -7,7 +7,8 @@ interface KsVueOptions {
   resolveCommonReturn?: (json) => {
     result: any
   },
-  authUrl?: string,
+  authUrl: string,
+  unauthorizedUrl: string,
   transferAuthResult?: (result: any) => {
     urlKey: string,
     url: boolean,

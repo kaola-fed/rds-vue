@@ -2,7 +2,7 @@ import {
   Component,
   Prop,
   Provide,
-  Emit,
+  Emit, Vue,
 } from 'vue-property-decorator';
 
 import KsBaseProvider from '../KSBaseProvider';
@@ -28,9 +28,6 @@ export default class KsAuthProvider extends KsBaseProvider {
   @Provide('authMaps')
   private authMaps = new Map<string, Map<string, AuthItem>>();
 
-  @Prop({ type: String, default: '' })
-  private authUrl;
-
   @Prop({ type: Array, default: (): AuthParam[] => [] })
   private authParam;
 
@@ -39,12 +36,6 @@ export default class KsAuthProvider extends KsBaseProvider {
 
   @Prop({ type: Object })
   private dataAuthParam: any;
-
-  @Prop({ type: String })
-  private unauthorizedUrl;
-
-  @Prop({ type: Function, default: (v):AuthItem[] => v })
-  private transferAuthResult;
 
   @Emit('ready')
   onReady(authUrls) {
@@ -64,9 +55,9 @@ export default class KsAuthProvider extends KsBaseProvider {
     } catch (e) {
       // 403: 无权限访问
       if (Number(e.code) === 403) {
-        window.location.href = this.unauthorizedUrl;
+        window.location.href = Vue.ksvue.unauthorizedUrl;
       } else {
-        console.error(e);  // eslint-disable-line
+        console.error(e);
       }
     }
   }
@@ -82,12 +73,21 @@ export default class KsAuthProvider extends KsBaseProvider {
   }
 
   async authUrls() {
-    const { authUrl, authParam } = this;
+    const {
+      authUrl,
+      transferAuthResult
+    } = Vue.ksvue;
+
+    if (!authUrl) {
+      throw new Error('【KSVUE】缺少参数 >>> 请配置authUrl参数');
+    }
+
+    const { authParam } = this;
     const res = await jsonApi.post(authUrl, authParam) as any;
     const result = res.result || {};
 
-    const authUrls = this.transferAuthResult(result);
-    const authItems = new Map(authUrls.map(el => [el.urlKey, el]));
+    const authUrls = transferAuthResult ? transferAuthResult(result) : result;
+    const authItems = new Map<string, AuthItem>(authUrls.map(el => [el.urlKey, el]));
 
     this.onReady(authUrls);
     this.authMaps.set(window.location.pathname, authItems);
@@ -98,6 +98,7 @@ export default class KsAuthProvider extends KsBaseProvider {
     if (!this.isReady) {
       return null;
     }
-    return super.render();
+    // @ts-ignore
+    return KsBaseProvider.options.render.call(this);
   }
 }

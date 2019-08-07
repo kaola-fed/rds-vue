@@ -1,12 +1,12 @@
 <template>
     <div>
-        <ks-auth-provider :authUrl="authUrl" :authParam="authParam">
+        <ks-auth-provider :authParam="authParam">
             <div>
                 <ks-auth urlKey="test">
                     <p>limited content</p>
                 </ks-auth>
+                <p>this is a passage</p>
             </div>
-            <p>this is a passage</p>
         </ks-auth-provider>
 
         <!-- <ks-auth-provider class="f-mt20"
@@ -37,7 +37,6 @@
 export default {
   data() {
     return {
-      authUrl: 'https://nei.netease.com/api/apimock/d006bd9dcbfc2d76c67cb8629e805516/api/post/displayUrl',
       authParam: [
         {
           urlKey: 'test',

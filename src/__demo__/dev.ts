@@ -16,6 +16,8 @@ RdsVue.install(Vue, {
   remoteSelectUrl() {
     return 'https://api.jsonbin.io/b/5d48501e77bd85336aa82139';
   },
+  authUrl: 'https://nei.netease.com/api/apimock/d006bd9dcbfc2d76c67cb8629e805516/api/post/displayUrl',
+  unauthorizedUrl: '/unauth'
 });
 
 Vue.use(VueRouter);

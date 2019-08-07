@@ -28,7 +28,6 @@ export default class KsAuthProvider extends KsBaseProvider {
   async created() {
     const { urlKey } = this;
     const authUrls = this.authMaps.get(window.location.pathname);
-    console.log(authUrls);
     if (!authUrls) {
       return;
     }
@@ -45,7 +44,7 @@ export default class KsAuthProvider extends KsBaseProvider {
         if (Number(e.code) === 403) {
           this.authorized = false;
         } else {
-          console.error(e); // eslint-disable-line
+          console.error(e);
         }
       }
     }
@@ -60,6 +59,7 @@ export default class KsAuthProvider extends KsBaseProvider {
     if (!this.authorized) {
       return null;
     }
-    return super.render();
+    // @ts-ignore
+    return KsBaseProvider.options.render.call(this);
   }
 }
