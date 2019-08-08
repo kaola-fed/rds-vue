@@ -27,16 +27,13 @@ rdsVue.install(Vue, {
     remoteSelectUrl() {
         return '/remote'; // 远程搜索下拉组件的通用url配置函数，需返回字符串类型
     },
-    authUrl: '' // 系统级的获取权限接口，更多使用可参见KSAuthMixin文档
+    authUrl: '', // 系统级的获取权限接口，更多使用可参见KSAuthMixin文档
+    unauthorizedUrl: '', // 系统级的无权限页
     transferAuthResult() {
         // 权限接口返回值的处理函数，更多使用可参见KSAuthMixin文档
     }
 })
 ```
-
-### 注意事项
-- rds-vue组件库中虽然依赖了element-ui，但是为避免打包后体积太大而采用的按需引用方式。因此和项目中引入element-ui不会冲突，版本相互独立，项目中如需使用，仍可正常引用element-ui。
-- rds-vue组件库中已经引入了element-kaola,所以项目中无需重复引用。
 
 ### Usage(按需引用)
 
@@ -52,6 +49,9 @@ export default {
 
 ```
 
+### 注意事项
+- rds-vue组件库中已经引入了element-kaola,所以项目中无需重复引用。
+
 ### 本地开发组件库
 本地开发组件库。
 
@@ -64,13 +64,34 @@ npm run serve
 
 ```
 
+### git commit msg 规范
+
+``` bash
+$ git commit -m 'feat: add feature'
+```
+
+- feat: 表示新增了一个功能
+- fix: 表示修复了一个 bug
+- docs: 表示只修改了文档
+- style: 表示修改格式、书写错误、空格等不影响代码逻辑的操作
+- refactor: 表示修改的代码不是新增功能也不是修改 bug，比如代码重构
+- perf: 表示修改了提升性能的代码
+- test: 表示修改了测试代码
+- build: 表示修改了编译配置文件
+- chore: 无 src 或 test 的操作
+- revert: 回滚操作
+
+### 可使用npm run cm 提交
+
+``` bash
+$ npm run cm
+```
+
 ### 组件库打包及发布
 
 ``` bash
-# 打包命令
-npm run build
-# 发布命令包含打包
-npm run release
+# 发布命令，运行后自动打包
+npm publish
 ```
 
 ### 文档编写

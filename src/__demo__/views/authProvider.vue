@@ -3,7 +3,7 @@
         <ks-auth-provider :authParam="authParam">
             <div>
                 <ks-auth urlKey="test">
-                    <p>limited content</p>
+                    <p>limited content1</p>
                 </ks-auth>
                 <p>this is a passage</p>
             </div>
@@ -14,10 +14,10 @@
             :dataAuthUrl="dataAuthUrl" :dataAuthParam="dataAuthParam">
             <div>
                 <ks-auth urlKey="test">
-                    <p>limited content</p>
+                    <p>limited content2</p>
                 </ks-auth>
+                <p>this is a passage</p>
             </div>
-            <p>this is a passage</p>
         </ks-auth-provider>
 
         <ks-auth-provider class="f-mt20"
@@ -25,10 +25,11 @@
             :dataAuthUrl="dataAuthUrl" :dataAuthParam="dataAuthParam">
             <div>
                 <ks-auth urlKey="test" :dataOpUrl="dataOpUrl" :dataOpParam="dataOpParam">
-                    <p>limited content</p>
+                    <p>limited content3</p>
                 </ks-auth>
+                <p>this is a passage</p>
             </div>
-            <p>this is a passage</p>
+
         </ks-auth-provider>
     </div>
 </template>
@@ -43,11 +44,11 @@ export default {
           requestUrl: 'http://baidu.com',
         },
       ],
-      dataAuthUrl: 'http://localhost:8083/isDisplayLinks2',
+      dataAuthUrl: 'https://nei.netease.com/api/apimock/d006bd9dcbfc2d76c67cb8629e805516/api/get/dataAuth',
       dataAuthParam: {
         value1: 123,
       },
-      dataOpUrl: 'http://localhost:8083/isDisplayLinks3',
+      dataOpUrl: 'https://nei.netease.com/api/apimock/d006bd9dcbfc2d76c67cb8629e805516/api/get/dataOp',
       dataOpParam: {
         value2: 123,
       },
