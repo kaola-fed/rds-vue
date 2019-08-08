@@ -29,7 +29,6 @@
                 </ks-auth>
                 <p>this is a passage</p>
             </div>
-
         </ks-auth-provider>
     </div>
 </template>
