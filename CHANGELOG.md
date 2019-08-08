@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/kaola-fed/rds-vue/compare/v0.0.1...v0.0.2) (2019-08-08)
+
+
+### Bug Fixes
+
+* bug fixed ([bedccfc](https://github.com/kaola-fed/rds-vue/commit/bedccfc))
+
 ### 0.0.1 (2019-08-08)
 
 
