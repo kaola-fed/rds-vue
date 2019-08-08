@@ -9,8 +9,8 @@
             </div>
         </ks-auth-provider>
 
-        <!-- <ks-auth-provider class="f-mt20"
-            :authUrl="authUrl" :authParam="authParam"
+        <ks-auth-provider class="f-mt20"
+            :authParam="authParam"
             :dataAuthUrl="dataAuthUrl" :dataAuthParam="dataAuthParam">
             <div>
                 <ks-auth urlKey="test">
@@ -21,7 +21,7 @@
         </ks-auth-provider>
 
         <ks-auth-provider class="f-mt20"
-            :authUrl="authUrl" :authParam="authParam"
+            :authParam="authParam"
             :dataAuthUrl="dataAuthUrl" :dataAuthParam="dataAuthParam">
             <div>
                 <ks-auth urlKey="test" :dataOpUrl="dataOpUrl" :dataOpParam="dataOpParam">
@@ -29,7 +29,7 @@
                 </ks-auth>
             </div>
             <p>this is a passage</p>
-        </ks-auth-provider> -->
+        </ks-auth-provider>
     </div>
 </template>
 
@@ -50,11 +50,6 @@ export default {
       dataOpUrl: 'http://localhost:8083/isDisplayLinks3',
       dataOpParam: {
         value2: 123,
-      },
-      urlKey: '',
-      transferAuthResult(result) {
-        console.log(result);
-        return result;
       },
     };
   },

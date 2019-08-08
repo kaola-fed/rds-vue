@@ -4,11 +4,12 @@
   "scripts": {
     "serve": "vue-cli-service serve ./src/__demo__/dev.ts",
     "build": "vue-cli-service build --target=lib --name=rdsvue ./src/index.ts",
-    "lint": "rm -rf ./types && tsc && eslint -c .eslintrc.js --fix --ext .ts,.tsx,.vue",
+    "lint": "eslint --ext .ts,.tsx,.vue  --fix src",
     "prebuild": "rm -rf ./types && tsc -p ./tsconfig.json",
     "postbuild": "rm -rf ./types/__demo__",
-    "prerelease": "npm login",
-    "release": "npm run build && npm publish"
+    "release": "standard-version -i CHANGELOG.md -r patch",
+    "cm": "git-cz",
+    "prepublishOnly": "npm run build && npm run release"
   },
   "main": "./dist/rdsvue.umd.min.js",
   "files": [
@@ -22,6 +23,23 @@
   ],
   "author": "kaolafed",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,vue}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "dayjs": "^1.8.14",
@@ -31,6 +49,8 @@
     "vue-clipboard2": "^0.3.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "@types/chai": "^4.1.0",
     "@types/mocha": "^5.2.4",
     "@types/qs": "^6.5.2",
@@ -47,12 +67,16 @@
     "babel-eslint": "^10.0.1",
     "babel-plugin-component": "^1.1.1",
     "chai": "^4.1.2",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "eslint": "^5.8.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-vue": "^5.0.0",
+    "husky": "^3.0.2",
     "lint-staged": "^8.1.4",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "standard-version": "^7.0.0",
     "style-resources-loader": "^1.2.1",
     "typescript": "^3.2.1",
     "vue": "^2.6.10",

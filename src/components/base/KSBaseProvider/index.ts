@@ -15,7 +15,7 @@ export default class KsBaseProvider extends Vue {
     if (this.$slots.default.length > 1) {
       console.error(
         'Provider only support single child, first node will be rendered.',
-        `<${(<typeof KsBaseProvider>this.constructor).componentName}>`
+        `<${(<typeof KsBaseProvider> this.constructor).componentName}>`,
       );
     }
     return this.$slots.default[0];

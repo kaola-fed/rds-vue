@@ -75,7 +75,7 @@ export default class KsAuthProvider extends KsBaseProvider {
   async authUrls() {
     const {
       authUrl,
-      transferAuthResult
+      transferAuthResult,
     } = Vue.ksvue;
 
     if (!authUrl) {
