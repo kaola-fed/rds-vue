@@ -9,7 +9,7 @@
     "postbuild": "rm -rf ./types/__demo__",
     "release": "standard-version -i CHANGELOG.md -r patch",
     "cm": "git-cz",
-    "prepublishOnly": "npm run build && npm run release"
+    "prepublishOnly": "npm run build && npm run release && git push"
   },
   "main": "./dist/rdsvue.umd.min.js",
   "files": [
