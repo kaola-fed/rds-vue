@@ -162,8 +162,22 @@ export default class Mixin extends Vue {
     return true;
   }
 
+  private urlAddDownload(url, filename = '') {
+    let str = url.split('#')[0];
+    if (/\?/g.test(url)) {
+      str += `&download=${filename}`;
+    } else {
+      str += `?download=${filename}`;
+    }
+    if (url.split('#')[1]) {
+      str += `#${url.split('#')[1]}`;
+    }
+    return str;
+  }
+
   private onDownLoad(file: any) {
-    download(file.url, { download: file.name });
+    const url = this.urlAddDownload(file.url, file.name);
+    download(url);
   }
 
   private genUid() {
