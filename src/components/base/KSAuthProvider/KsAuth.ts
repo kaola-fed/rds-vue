@@ -22,7 +22,7 @@ export default class KsAuthProvider extends KsBaseProvider {
   @Prop({ type: String, default: '' })
   private dataOpUrl!: string;
 
-  @Prop({ type: Object })
+  @Prop({ type: Object, default: () => {} })
   private dataOpParam: any;
 
   async created() {

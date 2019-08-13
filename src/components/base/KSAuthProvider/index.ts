@@ -34,7 +34,7 @@ export default class KsAuthProvider extends KsBaseProvider {
   @Prop({ type: String, default: '' })
   private dataAuthUrl;
 
-  @Prop({ type: Object })
+  @Prop({ type: Object, default: () => {} })
   private dataAuthParam: any;
 
   @Emit('ready')

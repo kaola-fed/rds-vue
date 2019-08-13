@@ -12,7 +12,7 @@ export default class KsTreeSelect extends Mixins(SourceProviderMixin) {
   public static componentName = 'KsTreeSelect';
 
   /* 选中的id值 */
-  @Prop({ type: Array, default: [] })
+  @Prop({ type: Array, default: () => [] })
   public value!: any[];
 
   /** 默认的source数据源结构为id, name, children
