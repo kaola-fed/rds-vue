@@ -11,7 +11,7 @@ export default class TreeStore {
   constructor(options) {
     for (let option in options) {
       if (options.hasOwnProperty(option)) {
-        this[option] = options[option]
+        this[option] = options[option];
       }
     }
     this.nodesMap = {};
@@ -20,7 +20,8 @@ export default class TreeStore {
     this.maxLevel = 0;
     this.root = new Node({
       data: this.data,
-      store: this
+      showRoot: (this as any).showRoot,
+      store: this,
     });
   }
 }

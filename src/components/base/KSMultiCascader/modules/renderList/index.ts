@@ -22,42 +22,12 @@ export default class RenderList extends Vue {
 
   @Prop({ type: String, default: 'click' }) expandTrigger
 
-  @Prop({ type: Boolean, default: false }) onlyLast
+  @Prop({ type: Number, default: Infinity }) limit
 
-  oldValue = {
-    oldNode: null,
-    oldLevelIndex: null,
-    oldLevel: null,
-  }
-
-  handleMouseOut() {
-    this.oldValue = {
-      oldNode: null,
-      oldLevelIndex: null,
-      oldLevel: null,
-    };
-  }
-
-  // mouseEnter会一直触发，然后阻止了click事件，改为mouseMove事件
-  handleMouseMove(node, levelIndex, level) {
-    if (this.expandTrigger !== 'hover') {
-      return false
+  handleMouseEnter(node, levelIndex, level) {
+    if (this.expandTrigger === 'hover') {
+      this.$emit('handle-click', node, levelIndex, level);
     }
-    let { oldNode, oldLevelIndex, oldLevel } = this.oldValue
-    if (
-      (node === oldNode) &&
-      (oldLevelIndex === levelIndex) &&
-      (oldLevel === level)
-    ) {
-      return false
-    }
-    this.oldValue = {
-      oldNode: node,
-      oldLevelIndex: levelIndex,
-      oldLevel: level,
-    }
-
-    this.$emit('handle-click', node, levelIndex, level)
   }
 
   handleClick(node, levelIndex, level) {
@@ -71,11 +41,7 @@ export default class RenderList extends Vue {
     this.$emit('handle-check', node);
   }
 
-  guid() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-      let r = Math.random() * 16 | 0
-      let v = c === 'x' ? r : (r & 0x3 | 0x8)
-      return v.toString(16)
-    });
+  getKey(node) {
+    return node.level + node.id;
   }
 }

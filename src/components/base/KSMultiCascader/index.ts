@@ -4,8 +4,8 @@ import {
   Vue, Component, Prop, Watch,
 } from 'vue-property-decorator';
 import TreeStore from './lib/tree';
-import { _findByObj } from './lib/unit';
 import renderList from './modules/renderList/index';
+import _find from 'lodash.find';
 
 @Component({
   components: {
@@ -33,15 +33,16 @@ export default class KSMultiCascader extends Vue {
 
   @Prop({ type: String, default: 'name' }) labelKey!: string
 
+  @Prop({ type: Boolean, default: false }) showRoot!: boolean
+
   @Prop({ type: String, default: 'children' }) childrenKey!: string
 
   @Prop({ type: String, default: 'click' }) expandTrigger!: string
 
-  @Prop({ type: Boolean, default: false }) onlyLast!: boolean
+  @Prop({ type: String, default: Infinity }) limit!: string
 
-  @Prop({ type: Boolean, default: true }) isTwoDimensionValue!: boolean
+  @Prop({ type: String }) size!: string
 
-  @Prop({ type: Boolean, default: false }) showLeafLabel!: boolean
 
   selectedLabels = [];
 
@@ -70,7 +71,8 @@ export default class KSMultiCascader extends Vue {
   }
 
   get innerPopperClass() {
-    return `${this.popperClass} multi-cascader ${this.isSearching ? '' : 'multi-cascader-style'} ${this.activeClass}`;
+    return `${this.popperClass} multi-cascader
+      ${this.isSearching ? '' : 'multi-cascader-style'} ${this.activeClass}`;
   }
 
   @Watch('data', { deep: true })
@@ -81,10 +83,10 @@ export default class KSMultiCascader extends Vue {
   @Watch('value', { deep: true })
   onValueChange(newValue, oldValue) {
     if (!this.value || !this.value.length) {
-        this.init();
-        this.activeClass = 'floor-width-1';
+      this.init();
+      this.activeClass = 'floor-width-1';
     } else {
-        this.updateSelect(newValue, true, true);
+      this.updateSelect(newValue, true, true);
     }
   }
 
@@ -99,8 +101,6 @@ export default class KSMultiCascader extends Vue {
   }
 
   visibleChange(v) {
-    this.activeList = [];
-    this.activeClass = 'floor-width-1';
     if (!v) {
       this.searchText = '';
     }
@@ -117,23 +117,15 @@ export default class KSMultiCascader extends Vue {
   }
 
   handleClear() {
-    this.selectedNodes.forEach((node) => {
-      (node as any).check(false);
-    });
-    this.$emit('input', []);
     this.$emit('clear');
   }
 
-  /* eslint no-param-reassign: ["error"] */
   selectOne(item) {
     item.checked = !item.checked;
     this.handleCheck(item);
   }
 
   changeLabel(v) {
-    (this.store as any).nodeList.forEach((node) => {
-      node.check(v.includes(node.showLabel));
-    });
     this.$emit('change', v);
   }
 
@@ -155,11 +147,9 @@ export default class KSMultiCascader extends Vue {
   }
 
   getKey() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-      /* eslint-disable-next-line no-bitwise */
-      const r = Math.random() * 16 | 0;
-      /* eslint-disable-next-line no-bitwise, no-mixed-operators */
-      const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+      // tslint:disable-next-line
+      let r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
       return v.toString(16);
     });
   }
@@ -182,7 +172,7 @@ export default class KSMultiCascader extends Vue {
     node.check(node.checked);
     this.selectedIds = (this.store as any).selectedIds;
     this.updateSelect((this.store as any).selectedIds);
-    this.$emit('input', this.selectedNodes.map(o => o[this.isTwoDimensionValue ? '_idArr' : this.valueKey]));
+    this.$emit('input', this.selectedNodes.map(o => o[this.valueKey]));
   }
 
   removeOne(v) {
@@ -196,22 +186,24 @@ export default class KSMultiCascader extends Vue {
     const tempSelectedNodes = [];
     const tempSelectedLabels = [];
     const tempSelectedIds = [];
-    (this.store as any).nodeList.forEach((node) => {
-      /* eslint-disable-next-line no-unused-expressions */
-      node.checked && node.check(false);
-    });
-    data.forEach((o) => {
+
+    (data || []).forEach(o => {
       let targetNode;
       if (setValue) {
-        targetNode = _findByObj((this.store as any).nodeList, { [this.isTwoDimensionValue ? '_idArr' : this.valueKey]: o }) || {};
-        (tempSelectedIds as any).push(targetNode.id);
+        const findObj = {};
+        findObj[this.valueKey] = o;
+        targetNode = _find((this.store as any).nodeList, findObj);
+        if (targetNode) {
+          (tempSelectedIds as any).push(targetNode.id);
+        } else {
+          console.warn(`data中不存在value值`);
+        }
       } else {
         targetNode = (this.store as any).nodesMap[o];
         (tempSelectedIds as any).push(o);
       }
       if (targetNode) {
-        /* eslint-disable-next-line no-unused-expressions */
-        needCheckNode && targetNode.check(true);
+      needCheckNode && targetNode.check(true);
         (tempSelectedNodes as any).push(targetNode);
         (tempSelectedLabels as any).push(targetNode.showLabel);
       }
@@ -222,13 +214,13 @@ export default class KSMultiCascader extends Vue {
   }
 
   init() {
-    (this.store as any) = new TreeStore({
+    this.store = new TreeStore({
       data: this.data,
       separator: this.separator,
       valueKey: this.valueKey,
       labelKey: this.labelKey,
       childrenKey: this.childrenKey,
-      showLeafLabel: this.showLeafLabel,
+      showRoot: this.showRoot,
     });
     this.root = (this.store as any).root;
     this.maxLevellist = Array.from({ length: (this.store as any).maxLevel - 1 }, (v, i) => {
