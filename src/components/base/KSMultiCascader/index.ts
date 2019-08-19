@@ -39,7 +39,7 @@ export default class KSMultiCascader extends Vue {
 
   @Prop({ type: String, default: 'click' }) expandTrigger!: string
 
-  @Prop({ type: String, default: Infinity }) limit!: string
+  @Prop({ type: Number, default: Infinity }) limit!: number
 
   @Prop({ type: String }) size!: string
 
