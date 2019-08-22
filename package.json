@@ -1,6 +1,6 @@
 {
   "name": "rds-vue",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "serve": "vue-cli-service serve ./src/__demo__/dev.ts",
     "build": "vue-cli-service build --target=lib --name=rdsvue ./src/index.ts",
@@ -44,7 +44,6 @@
     "axios": "^0.18.0",
     "dayjs": "^1.8.14",
     "element-kaola": "^3.0.36",
-    "element-ui": "^2.10.1",
     "qs": "^6.7.0",
     "vue-clipboard2": "^0.3.0"
   },
@@ -69,11 +68,16 @@
     "chai": "^4.1.2",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
+    "element-ui": "^2.11.1",
     "eslint": "^5.8.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-vue": "^5.0.0",
     "husky": "^3.0.2",
     "lint-staged": "^8.1.4",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.find": "^4.6.0",
+    "lodash.get": "^4.4.2",
+    "lodash.uniq": "^4.5.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "standard-version": "^7.0.0",
@@ -85,11 +89,7 @@
     "vue-property-decorator": "^8.0.0",
     "vue-router": "^3.0.6",
     "vue-template-compiler": "^2.5.21",
-    "webpack-bundle-analyzer": "^3.3.2",
-    "lodash.clonedeep": "^4.5.0",
-    "lodash.find": "^4.6.0",
-    "lodash.get": "^4.4.2",
-    "lodash.uniq": "^4.5.0"
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "types": "./types/index.d.ts"
 }
