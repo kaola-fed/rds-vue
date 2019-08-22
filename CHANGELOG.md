@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/kaola-fed/rds-vue/compare/v0.0.6...v0.0.7) (2019-08-22)
+
+
+### Features
+
+* element-ui改为引用external的版本 ([7118bb3](https://github.com/kaola-fed/rds-vue/commit/7118bb3))
+
 ### [0.0.6](https://github.com/kaola-fed/rds-vue/compare/v0.0.5...v0.0.6) (2019-08-22)
 
 ### [0.0.5](https://github.com/kaola-fed/rds-vue/compare/v0.0.4...v0.0.5) (2019-08-19)
