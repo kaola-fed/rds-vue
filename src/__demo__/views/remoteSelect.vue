@@ -3,9 +3,9 @@
     <!-- <ks-remote-select v-model="condition.supplierId"
       prefix="qc-complaint"
       skey="supplierList"></ks-remote-select> -->
-    <ks-remote-select v-model="supplierId"
+    <ks-remote-select v-model="supplierId1"
       skey="test"></ks-remote-select>
-    <ks-remote-select placeholder="请输入关键字搜索" size="large" multiple v-model="supplierId"
+    <ks-remote-select placeholder="请输入关键字搜索" size="large" multiple v-model="supplierId2"
     skey="first" :ajax-fn="getUrl" />
       <ks-divider :longer="20" dashed />
         <ks-divider>text</ks-divider>
@@ -24,7 +24,8 @@ import { jsonApi } from '../../request';
 export default {
   data() {
     return {
-      supplierId: '',
+      supplierId1: '',
+      supplierId2: [],
     };
   },
   methods: {

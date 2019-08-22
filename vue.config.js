@@ -26,6 +26,12 @@ module.exports = {
           commonjs2: 'vue',
           amd: 'vue',
         },
+        'element-ui': {
+          root: 'ELEMENT',
+          commonjs: 'element-ui',
+          commonjs2: 'element-ui',
+          amd: 'element-ui',
+        },
       };
     }
     return {};
