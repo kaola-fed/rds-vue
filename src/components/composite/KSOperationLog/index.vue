@@ -14,7 +14,7 @@
           >备注：{{ item[model.remark] }}</span>
         </el-col>
         <el-col :span="6" align="right">
-          <span v-if="timestamp" class="ks-log-font--grey">{{item[model.date] | formatTime}}</span>
+          <span v-if="timestamp" class="ks-log-font--grey">{{item[model.date] | datetime}}</span>
           <span v-else class="ks-log-font--grey">{{item[model.date]}}</span>
         </el-col>
       </el-row>
@@ -26,7 +26,7 @@
         </el-col>
         <el-col :span="12" align="right">
           <span v-if="timestamp" class="ks-log-font--grey">
-            {{ item[model.date] | formatTime }}
+            {{ item[model.date] | datetime }}
           </span>
           <span v-else class="ks-log-font--grey">{{ item[model.date] }}</span>
         </el-col>
