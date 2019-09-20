@@ -26,6 +26,9 @@ export default class KsSourceProvider extends KsBaseProvider {
   @Prop({ type: Number, default: 150 })
   public throttleTime!: number;
 
+  @Prop({ type: String, default: '' })
+  public service!: string;
+
   @Provide('provideSources')
   public sources: Sources = {};
 
@@ -64,12 +67,14 @@ export default class KsSourceProvider extends KsBaseProvider {
     const { selectUrl, resolveCommonReturn } = Vue.ksvue;
 
     try {
-      if (!selectUrl) {
+      if (!selectUrl && !this.service) {
         throw new Error('【KSVUE】缺少参数 >>> 请配置selectUrl参数');
       }
 
+      // @ts-ignore
+      const url = this.service || selectUrl();
       const keys = sourceKeys.join(',');
-      let res: any = await jsonApi.get(selectUrl(), { params: { keys } });
+      let res: any = await jsonApi.get(url, { params: { keys } });
 
       if (resolveCommonReturn) {
         res = resolveCommonReturn(res);
