@@ -61,6 +61,7 @@
       :visible.sync="importFileModalVisible"
       :importUrl="importUrl"
       :templateUrl="templateUrl"
+      :tips="importFileTips"
       :onLoadInterceptor="onLoadInterceptor"/>
 
       <ks-detail-header
@@ -398,6 +399,7 @@ export default {
           ),
         },
       ],
+      importFileTips: ['hello', 'tip'],
       routeList: [
         {
           route: ' 转入地审批 转入地审批 转入地审批 转入地审批 转入地审批 转入地审批 转入地审批 转入地审批 转入地审批 转入地审批 转入地审批 转入地审批 转入地审批',

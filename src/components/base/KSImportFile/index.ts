@@ -34,6 +34,9 @@ export default class KsImportFile extends Vue {
   @Prop({ type: String, default: 'resultUrl' })
   public urlKey!: string;
 
+  @Prop({ type: Array, default: () => ([]) })
+  public tips!: string[];
+
   /* data */
   public status: string = 'init';
 
