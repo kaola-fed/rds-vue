@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/kaola-fed/rds-vue/compare/v0.0.14...v0.0.15) (2019-09-26)
+
+
+### Features
+
+* ksimport add tips prop ([0db0221](https://github.com/kaola-fed/rds-vue/commit/0db0221))
+
 ### [0.0.14](https://github.com/kaola-fed/rds-vue/compare/v0.0.13...v0.0.14) (2019-09-20)
 
 ### [0.0.13](https://github.com/kaola-fed/rds-vue/compare/v0.0.12...v0.0.13) (2019-09-20)
