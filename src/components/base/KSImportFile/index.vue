@@ -44,8 +44,13 @@
             <div class="ks-import-tip">
                 <h5>注意事项：</h5>
                 <p class="ks-import-tip__item">1. 请按照导出文件的格式进行导入，系统数据以本次导入的为准，历史数据的会被覆盖掉；</p>
-                <p class="ks-import-tip__item">2. 单次导入的数据最多5000行，如果数据量大，请分批导入；</p>
-                <p class="ks-import-tip__item">3. 文件大小不能超过2M。</p>
+                <p class="ks-import-tip__item">2. 文件大小不能超过2M。</p>
+                <p class="ks-import-tip__item">3. 单次导入的数据最多5000行，如果数据量大，请分批导入；</p>
+                <p class="ks-import-tip__item"
+                    v-for="(tip, $index) in tips"
+                    :key="$index">
+                    {{$index + 4}}. {{tip}}
+                </p>
             </div>
         </div>
 
