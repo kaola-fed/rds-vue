@@ -29,12 +29,21 @@ export default class KsSourceProvider extends KsBaseProvider {
   @Prop({ type: String, default: '' })
   public service!: string;
 
+  @Prop({ type: Array, default: () => [] })
+  public extraKeys!: string[];
+
   @Provide('provideSources')
   public sources: Sources = {};
 
   public queue: Set<string> = new Set();
 
   public throttleId: number | null = null;
+
+  created() {
+    if (this.extraKeys && this.extraKeys.length) {
+      this.getSourceByKeys(this.extraKeys);
+    }
+  }
 
   @Emit('fetched')
   onSourceFetched(source: Sources) {}
