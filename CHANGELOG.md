@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/kaola-fed/rds-vue/compare/v0.0.16...v0.0.17) (2019-10-11)
+
+
+### Bug Fixes
+
+* ks-auth-provider bug ([519fc41](https://github.com/kaola-fed/rds-vue/commit/519fc415c46d1c7ea980e4546b61694db04e0e1a))
+
 ### 0.0.16 (2019-10-10)
 
 
