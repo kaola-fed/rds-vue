@@ -83,7 +83,7 @@ export default class KsAuthProvider extends KsBaseProvider {
     }
 
     const { authParam } = this;
-    const res = await jsonApi.post(authUrl, authParam) as any;
+    const res: any = await jsonApi.post(authUrl, { displayRequestUrls: authParam });
     const result = res.result || {};
 
     const authUrls = transferAuthResult ? transferAuthResult(result) : result;

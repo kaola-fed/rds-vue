@@ -33,7 +33,8 @@ export default class KsAuthProvider extends KsBaseProvider {
     }
 
     // Step1: 先看操作是否有权限；
-    this.authorized = authUrls.has(urlKey);
+    const authItem = authUrls.get(urlKey);
+    this.authorized = authItem ? authItem.displayLinkUrl : false;
 
     if (this.authorized && this.dataOpUrl) {
       try {
