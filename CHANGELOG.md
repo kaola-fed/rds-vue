@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.19 (2019-10-12)
+
+
+### Bug Fixes
+
+* bug fixed ([4536ddd](https://github.com/kaola-fed/rds-vue/commit/4536ddd))
+* bug fixed ([bedccfc](https://github.com/kaola-fed/rds-vue/commit/bedccfc))
+* bug fixed ([6505376](https://github.com/kaola-fed/rds-vue/commit/6505376))
+* bug fixed ([c78fd1b](https://github.com/kaola-fed/rds-vue/commit/c78fd1b))
+* cascader bug fixed ([4528ff1](https://github.com/kaola-fed/rds-vue/commit/4528ff1))
+* ks-auth-provider bug ([519fc41](https://github.com/kaola-fed/rds-vue/commit/519fc41))
+* ks-operation-log  bug fixed ([6f5c848](https://github.com/kaola-fed/rds-vue/commit/6f5c848))
+* upload component bug fixed ([bd0ace6](https://github.com/kaola-fed/rds-vue/commit/bd0ace6))
+
+
+### Features
+
+* add ([9a1b831](https://github.com/kaola-fed/rds-vue/commit/9a1b831))
+* add husky & standard-version ([3b808e3](https://github.com/kaola-fed/rds-vue/commit/3b808e3))
+* element-ui改为引用external的版本 ([7118bb3](https://github.com/kaola-fed/rds-vue/commit/7118bb3))
+* ksimport add tips prop ([0db0221](https://github.com/kaola-fed/rds-vue/commit/0db0221))
+* lock version of element-kaola ([d635214](https://github.com/kaola-fed/rds-vue/commit/d635214))
+* save ([c410987](https://github.com/kaola-fed/rds-vue/commit/c410987))
+* save ([faaeb6b](https://github.com/kaola-fed/rds-vue/commit/faaeb6b))
+* save ([b785992](https://github.com/kaola-fed/rds-vue/commit/b785992))
+* save ([1620957](https://github.com/kaola-fed/rds-vue/commit/1620957))
+* save ([85345e8](https://github.com/kaola-fed/rds-vue/commit/85345e8))
+* save ([e77a59d](https://github.com/kaola-fed/rds-vue/commit/e77a59d))
+* save ([0520132](https://github.com/kaola-fed/rds-vue/commit/0520132))
+* save ([f99bbb5](https://github.com/kaola-fed/rds-vue/commit/f99bbb5))
+* source provider增加extraKeys参数 ([24f5bff](https://github.com/kaola-fed/rds-vue/commit/24f5bff))
+* source provider增加service参数 ([729c150](https://github.com/kaola-fed/rds-vue/commit/729c150))
+* 增加scss声明文件自动导入功能 ([3eb0178](https://github.com/kaola-fed/rds-vue/commit/3eb0178))
+
 ### [0.0.17](https://github.com/kaola-fed/rds-vue/compare/v0.0.16...v0.0.17) (2019-10-11)
 
 
