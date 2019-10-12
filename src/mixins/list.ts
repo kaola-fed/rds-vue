@@ -51,7 +51,7 @@ export default class ListMixin extends Vue {
 
       this.loading = true;
       const param = this.getListParam();
-      const data = await this.listService(filterEmpty(param));
+      const data = await this.listService(param);
       const result = data && (data.result || data.data || {});
       this.list = (result && result.list) || (result instanceof Array && result) || [];
       this.total = (result.pagination && result.pagination.total) || result.total;
@@ -76,7 +76,7 @@ export default class ListMixin extends Vue {
   }
 
   public getExtraParam() {
-    return this.condition;
+    return filterEmpty(this.condition || {});
   }
 
   public handleSizeChange(pageSize: number) {
