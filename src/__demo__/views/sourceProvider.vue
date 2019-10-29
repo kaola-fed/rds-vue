@@ -6,7 +6,7 @@
           <ks-select :source="source"/>
         </el-form-item>
         <el-form-item label="固定key: test">
-          <ks-select source-key="test"/>
+          <ks-select source-key="test" :limit="3"/>
         </el-form-item>
         <el-form-item :label="`动态key: ${firstKey}`">
           <ks-select :source-key="firstKey"/>
