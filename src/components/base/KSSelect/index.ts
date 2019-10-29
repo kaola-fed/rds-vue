@@ -34,6 +34,9 @@ export default class KsSelect extends Mixins(SourceProviderMixin) {
   protected filterInput: any = '';
 
   protected get filteredSource() {
+    if (!this.filterInput) {
+      return this.computedSource;
+    }
     const input = String(this.filterInput).replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
     const regexp = new RegExp(input, 'i');
     return this.computedSource.filter(item => regexp.test(item[this.labelKey]));

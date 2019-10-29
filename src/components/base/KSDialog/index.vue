@@ -6,6 +6,8 @@
           :custom-class="customClass"
           :title="title"
           :fullscreen="fullscreen"
+          :close-on-click-modal="false"
+          :close-on-press-escape="false"
           :before-close="beforeClose"
           @close="close">
 

@@ -9,6 +9,6 @@ export default class KsLabel extends Vue {
   private labelName!: string;
 
   // 标签值
-  @Prop({ type: String, default: '' })
-  public labelValue!: string;
+  @Prop({ type: [String, Number], default: '' })
+  public labelValue!: string | number;
 }
