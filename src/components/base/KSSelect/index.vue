@@ -6,10 +6,11 @@
         :clearable="clearable"
         :size="size"
         :disabled="disabled"
+        :filter-method="onFilterSource"
         @input="onInputFn($event)"
         @change="onChange($event)">
         <el-option
-            v-for="item in computedSource"
+            v-for="item in limitedSource"
             :key="item[valueKey]"
             :label="item[labelKey]"
             :value="item[valueKey]"
