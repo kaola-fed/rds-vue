@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.20](https://github.com/kaola-fed/rds-vue/compare/v0.0.15...v0.0.20) (2019-10-29)
+
+
+### Bug Fixes
+
+* ks-auth-provider bug ([519fc41](https://github.com/kaola-fed/rds-vue/commit/519fc41))
+* ksslabel value number ([f22370d](https://github.com/kaola-fed/rds-vue/commit/f22370d))
+
+
+### Features
+
+* add slot for ks-operation-log ([c885672](https://github.com/kaola-fed/rds-vue/commit/c885672))
+* avoid closing dialog when click the margins ([5f414b7](https://github.com/kaola-fed/rds-vue/commit/5f414b7))
+* limit ([794087b](https://github.com/kaola-fed/rds-vue/commit/794087b))
+* source provider增加extraKeys参数 ([24f5bff](https://github.com/kaola-fed/rds-vue/commit/24f5bff))
+
 ### 0.0.19 (2019-10-12)
 
 
