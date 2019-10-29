@@ -1,8 +1,10 @@
 @import "@/styles/mixins/index.scss";
 
+
 @include b(log-ctn) {
   max-height: 400px;
   overflow: auto;
+  padding-right: 20px;
 }
 @include b(log-row) {
   padding-bottom: 5px;

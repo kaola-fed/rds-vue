@@ -229,7 +229,11 @@
           </el-form>
         </template>
     </ks-detail-header> -->
-    <ks-operation-log :list="logList"/>
+    <ks-operation-log :list="logList">
+      <template v-slot:extend>
+        <el-button size="sm">备注</el-button>
+      </template>
+    </ks-operation-log>
   </div>
 </template>
 

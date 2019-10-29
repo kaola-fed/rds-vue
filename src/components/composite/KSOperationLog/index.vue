@@ -1,17 +1,20 @@
 <template>
-  <div class="ks-operation-log-block">
+  <div class="ks-log-block">
     <div v-if="format==='oneline'" class="ks-log-ctn">
       <el-row v-for="(item, index) in list" :key="index" class="ks-log-row ks-log-row--oneline">
         <el-col :span="4">
           <span class="log__author ks-log-font--grey">{{ item[model.author] }}</span>
         </el-col>
         <el-col :span="14">
-          <span :title="item.content">{{ item[model.content] }}</span>
-          <span
-            v-if="item.remark"
-            :title="item.remark"
-            class="log__remark ks-log-font--grey"
-          >备注：{{ item[model.remark] }}</span>
+          <el-row>
+            <span :title="item.content">{{ item[model.content] }}</span>
+            <span
+              v-if="item.remark"
+              :title="item.remark"
+              class="ks-log__remark ks-log-font--grey"
+            >备注：{{ item[model.remark] }}</span>
+          </el-row>
+          <el-row><slot name="extend" :item="item"></slot></el-row>
         </el-col>
         <el-col :span="6" align="right">
           <span v-if="timestamp" class="ks-log-font--grey">{{item[model.date] | datetime}}</span>
