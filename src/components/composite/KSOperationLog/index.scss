@@ -39,6 +39,7 @@
   }
   @include e(remark) {
     margin-left: 20px;
+    white-space: normal;
   }
   @include e(content) {
     margin-left: 20px;
