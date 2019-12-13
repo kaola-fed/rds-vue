@@ -10,3 +10,4 @@ dist/
 ts.out/
 types/
 package-lock.json
+.history/
