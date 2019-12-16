@@ -52,12 +52,6 @@ export default class RemoteSelect extends Vue {
     this.getFuzzySource(null, id);
   }
 
-  public onVisibleChange(e) {
-    if (!e) {
-      this.getFuzzySource(null, '');
-    }
-  }
-
   public getRemoteSelectApi() {
     const { remoteSelectUrl = null } = Vue.ksvue || {};
 
