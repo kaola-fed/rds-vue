@@ -11,7 +11,6 @@
             clearable
             remote
             :remote-method="v => _getFuzzySource(v)"
-            @visible-change="onVisibleChange"
             @change="onChange"
         >
             <el-option v-for="(i, index) in list"
