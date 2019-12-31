@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.26](https://github.com/kaola-fed/rds-vue/compare/v0.0.25...v0.0.26) (2019-12-31)
+
+
+### Features
+
+* add xsrf token ([bce4388](https://github.com/kaola-fed/rds-vue/commit/bce438824ce852b8fdd913db5da717917218decc))
+
 ### [0.0.25](https://github.com/kaola-fed/rds-vue/compare/v0.0.24...v0.0.25) (2019-12-16)
 
 

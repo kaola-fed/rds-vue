@@ -1,6 +1,6 @@
 {
   "name": "rds-vue",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "scripts": {
     "serve": "vue-cli-service serve ./src/__demo__/dev.ts",
     "build": "vue-cli-service build --target=lib --name=rdsvue ./src/index.ts",
