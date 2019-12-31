@@ -55,6 +55,11 @@ export default function upload(option: any) {
     return;
   }
 
+  const readCookie = function (name) {
+    const match = document.cookie.match(new RegExp(`(^|;\\s*)(${name})=([^;]*)`));
+    return (match ? decodeURIComponent(match[3]) : null);
+  };
+
   const xhr = new XMLHttpRequest();
   const { action } = option;
 
@@ -99,6 +104,8 @@ export default function upload(option: any) {
   }
 
   const headers = option.headers || {};
+
+  headers['X-XSRF-TOKEN'] = readCookie('XSRF-TOKEN') || '';
 
   if (headers['X-Requested-With'] !== null) {
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
