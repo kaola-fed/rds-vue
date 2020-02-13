@@ -1,6 +1,7 @@
 import { Component, Prop, Mixins } from 'vue-property-decorator';
 
 import SourceProviderMixin from '../../../mixins/sourceProvider';
+import { SourceItem } from '../KSSourceProvider';
 
 @Component
 export default class KsSelect extends Mixins(SourceProviderMixin) {
@@ -29,7 +30,8 @@ export default class KsSelect extends Mixins(SourceProviderMixin) {
   protected filterInput: any = '';
 
   protected get filteredSource() {
-    if (!this.filterInput && (!this.value || (this.multiple && !this.value.length))) {
+    if (!this.filterInput
+        && ((!this.value || (this.multiple && !this.value.length)) || !this.limit)) {
       return this.computedSource;
     }
 
@@ -38,16 +40,22 @@ export default class KsSelect extends Mixins(SourceProviderMixin) {
       '\\$&',
     );
     const regexp = new RegExp(input, 'i');
-    const inputMatched = this.filterInput
-      ? this.computedSource.filter(item => regexp.test(item[this.labelKey]))
-      : [];
+
+    let inputMatched: SourceItem[] = [];
+
+    if (this.filterInput) {
+      inputMatched = this.computedSource.filter(item => regexp.test(item[this.labelKey]));
+    } else {
+      inputMatched = (this.multiple ? this.computedSource : []);
+    }
+
     const valueMatched = this.value
       ? this.computedSource.filter(item => (this.multiple
         ? this.value.includes(item[this.valueKey])
         : String(this.value) === String(item[this.valueKey])))
       : [];
 
-    return [...inputMatched, ...valueMatched].filter(
+    return [...valueMatched, ...inputMatched].filter(
       (item, index, arr) => !arr.find((_, i) => _.id === item.id && i > index),
     );
   }
