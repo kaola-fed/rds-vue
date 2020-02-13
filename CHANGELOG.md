@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.32](https://github.com/kaola-fed/rds-vue/compare/v0.0.31...v0.0.32) (2020-02-13)
+
+
+### Bug Fixes
+
+* 多选时一旦选中一个值，其他值就只能通过模糊搜索选取 ([61bafa7](https://github.com/kaola-fed/rds-vue/commit/61bafa77985508c77a959acb8f42a8c53c1befe2))
+
 ### 0.0.31 (2020-02-13)
 
 
