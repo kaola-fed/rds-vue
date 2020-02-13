@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.31 (2020-02-13)
+
+
+### Features
+
+* add ([9a1b831](https://github.com/kaola-fed/rds-vue/commit/9a1b831e9af2a387495743c62782bb48cf94a5bb))
+* add husky & standard-version ([3b808e3](https://github.com/kaola-fed/rds-vue/commit/3b808e34aa8232f9bafc97ad7748eefaa4b7757e))
+* add slot for ks-operation-log ([c885672](https://github.com/kaola-fed/rds-vue/commit/c885672c2db0b83ee556b17c69216008c8b9e42e))
+* add xsrf token ([bce4388](https://github.com/kaola-fed/rds-vue/commit/bce438824ce852b8fdd913db5da717917218decc))
+* avoid closing dialog when click the margins ([5f414b7](https://github.com/kaola-fed/rds-vue/commit/5f414b72c85df70717eb4f0fea0b9e698fe6003e))
+* element-ui改为引用external的版本 ([7118bb3](https://github.com/kaola-fed/rds-vue/commit/7118bb3372d88f4883244a0f8c2d18be44e9a0c3))
+* ksimport add tips prop ([0db0221](https://github.com/kaola-fed/rds-vue/commit/0db0221b03131f1418194390a685498c82377cb5))
+* limit ([794087b](https://github.com/kaola-fed/rds-vue/commit/794087b84449c4ecaf5c6b1f49e5840ffb8d0311))
+* lock version of element-kaola ([d635214](https://github.com/kaola-fed/rds-vue/commit/d6352149f17e9217f9d52ec0411e7c2e2d1c19b7))
+* save ([0520132](https://github.com/kaola-fed/rds-vue/commit/05201323034b136472b9cbb9c73cd1a5e2819ccb))
+* save ([1620957](https://github.com/kaola-fed/rds-vue/commit/16209576e6e6fa48e0a2c820b0df5e1913a45a7d))
+* save ([b785992](https://github.com/kaola-fed/rds-vue/commit/b7859925df220a3de49d9a0eed06eebe4653255c))
+* save ([c410987](https://github.com/kaola-fed/rds-vue/commit/c410987e64fb92b58cf35f390d985da2c66f63e8))
+* save ([85345e8](https://github.com/kaola-fed/rds-vue/commit/85345e83affa0e3f6cbe63a000e355cfc73ce359))
+* save ([e77a59d](https://github.com/kaola-fed/rds-vue/commit/e77a59d04eebebb0bed50c38647790300c52a40a))
+* save ([f99bbb5](https://github.com/kaola-fed/rds-vue/commit/f99bbb58b241f47187b83c5c7caeb8dc0cfb61c3))
+* save ([faaeb6b](https://github.com/kaola-fed/rds-vue/commit/faaeb6bc2b10e4d478fa49d10eac5d1395948dc9))
+* source provider增加extraKeys参数 ([24f5bff](https://github.com/kaola-fed/rds-vue/commit/24f5bff1fded67d3e1d6af377c61d1b8cd7e49ab))
+* source provider增加service参数 ([729c150](https://github.com/kaola-fed/rds-vue/commit/729c15091ebdd199e3784f543d968a7392255e7b))
+* 增加scss声明文件自动导入功能 ([3eb0178](https://github.com/kaola-fed/rds-vue/commit/3eb01787d483177557b7d72fb1edba84022d13e0))
+
+
+### Bug Fixes
+
+* bug fixed ([c78fd1b](https://github.com/kaola-fed/rds-vue/commit/c78fd1b41c906c187c4592511977a95d2ad2016d))
+* bug fixed ([6505376](https://github.com/kaola-fed/rds-vue/commit/6505376493d79d2f5553c27a0109c7a524be89b6))
+* bug fixed ([bedccfc](https://github.com/kaola-fed/rds-vue/commit/bedccfc972dc3bb3da11001d5aa58149368b8a43))
+* bug fixed ([4536ddd](https://github.com/kaola-fed/rds-vue/commit/4536ddd235010ce90c1b8a2e565d3fc7603f850f))
+* cascader bug fixed ([4528ff1](https://github.com/kaola-fed/rds-vue/commit/4528ff1661f29a9192f028ded993f3673614186c))
+* fix log component ([662e4b7](https://github.com/kaola-fed/rds-vue/commit/662e4b70de628f00fd596f1b65a6007d3c09eda5))
+* ks-auth-provider bug ([519fc41](https://github.com/kaola-fed/rds-vue/commit/519fc415c46d1c7ea980e4546b61694db04e0e1a))
+* ks-operation-log  bug fixed ([6f5c848](https://github.com/kaola-fed/rds-vue/commit/6f5c84877e1e38b2f8cea5514d5b20e12e45ab64))
+* ksslabel value number ([f22370d](https://github.com/kaola-fed/rds-vue/commit/f22370dcf395194a00c6a81e4d4497aeb130954f))
+* ksuplaod component filename cannot contain & symbol ([bd7ca6e](https://github.com/kaola-fed/rds-vue/commit/bd7ca6e4c37a03271f0f88d4740b563eca9e7081))
+* upload component bug fixed ([bd0ace6](https://github.com/kaola-fed/rds-vue/commit/bd0ace61a7f1080f5d902610f4e9698bb82f8c74))
+* 下拉组件设置limit回显问题修复 ([d7b3577](https://github.com/kaola-fed/rds-vue/commit/d7b3577055fea2228cf8d348978fb007e4ae34bf))
+* 多选状态下，支持value设置为null ([f4088f0](https://github.com/kaola-fed/rds-vue/commit/f4088f0b9344312d98e3594774902a501444a3e4))
+* 远程搜索问题修复 ([5135c87](https://github.com/kaola-fed/rds-vue/commit/5135c876fddf4d5be1dd1e4f1c91607201f336fe))
+
 ### [0.0.30](https://github.com/kaola-fed/rds-vue/compare/v0.0.29...v0.0.30) (2019-12-31)
 
 ### [0.0.29](https://github.com/kaola-fed/rds-vue/compare/v0.0.28...v0.0.29) (2019-12-31)
