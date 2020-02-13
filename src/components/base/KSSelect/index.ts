@@ -57,7 +57,7 @@ export default class KsSelect extends Mixins(SourceProviderMixin) {
       return (
         this.filteredSource
           && this.filteredSource.slice(0, this.multiple
-            ? (this.limit + this.value.length)
+            ? (this.limit + (this.value ? this.value.length : 0))
             : this.limit)
       );
     }
