@@ -52,7 +52,7 @@ export default {
     setTimeout(() => { this.id03 = 7; this.id13 = 3; this.id23 = 5; }, 3000);
     setTimeout(() => { this.id05 = 7; this.id15 = 3; this.id25 = 5; }, 5000);
     setTimeout(() => {
-      this.list = Array.from(Array(1000)).map((_, i) => ({
+      this.list = Array.from(Array(20000)).map((_, i) => ({
         id: i + 1,
         name: `这是第${i + 1}项`,
       }));
