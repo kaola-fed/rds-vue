@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.33](https://github.com/kaola-fed/rds-vue/compare/v0.0.32...v0.0.33) (2020-02-26)
+
+
+### Bug Fixes
+
+* 修复数据量大时KsSelect设置limit时的性能问题 ([4cf5238](https://github.com/kaola-fed/rds-vue/commit/4cf52387980d6f362bb73ee2251525abf67efe84))
+
 ### [0.0.32](https://github.com/kaola-fed/rds-vue/compare/v0.0.31...v0.0.32) (2020-02-13)
 
 
