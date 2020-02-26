@@ -55,9 +55,17 @@ export default class KsSelect extends Mixins(SourceProviderMixin) {
         : String(this.value) === String(item[this.valueKey])))
       : [];
 
-    return [...valueMatched, ...inputMatched].filter(
-      (item, index, arr) => !arr.find((_, i) => _.id === item.id && i > index),
-    );
+    const temp = {};
+    const result: SourceItem[] = [];
+
+    [...valueMatched, ...inputMatched].forEach((item: SourceItem) => {
+      if (!temp[item[this.valueKey]]) {
+        temp[item[this.valueKey]] = true;
+        result.push(item);
+      }
+    });
+
+    return result;
   }
 
   protected get limitedSource() {
