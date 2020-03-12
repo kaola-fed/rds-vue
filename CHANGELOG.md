@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.35](https://github.com/kaola-fed/rds-vue/compare/v0.0.19...v0.0.35) (2020-03-12)
+
+
+### Bug Fixes
+
+* fix log component ([662e4b7](https://github.com/kaola-fed/rds-vue/commit/662e4b7))
+* ksslabel value number ([f22370d](https://github.com/kaola-fed/rds-vue/commit/f22370d))
+* ksuplaod component filename cannot contain & symbol ([bd7ca6e](https://github.com/kaola-fed/rds-vue/commit/bd7ca6e))
+* 下拉组件设置limit回显问题修复 ([d7b3577](https://github.com/kaola-fed/rds-vue/commit/d7b3577))
+* 修复数据量大时KsSelect设置limit时的性能问题 ([4cf5238](https://github.com/kaola-fed/rds-vue/commit/4cf5238))
+* 多选时一旦选中一个值，其他值就只能通过模糊搜索选取 ([61bafa7](https://github.com/kaola-fed/rds-vue/commit/61bafa7))
+* 多选状态下，支持value设置为null ([f4088f0](https://github.com/kaola-fed/rds-vue/commit/f4088f0))
+* 远程搜索问题修复 ([5135c87](https://github.com/kaola-fed/rds-vue/commit/5135c87))
+
+
+### Features
+
+* add slot for ks-operation-log ([c885672](https://github.com/kaola-fed/rds-vue/commit/c885672))
+* add xsrf token ([bce4388](https://github.com/kaola-fed/rds-vue/commit/bce4388))
+* avoid closing dialog when click the margins ([5f414b7](https://github.com/kaola-fed/rds-vue/commit/5f414b7))
+* limit ([794087b](https://github.com/kaola-fed/rds-vue/commit/794087b))
+
 ### [0.0.33](https://github.com/kaola-fed/rds-vue/compare/v0.0.32...v0.0.33) (2020-02-26)
 
 
