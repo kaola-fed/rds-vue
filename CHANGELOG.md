@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.37](https://github.com/kaola-fed/rds-vue/compare/v0.0.33...v0.0.37) (2020-04-24)
+
+
+### Features
+
+* remoteSelect add wait prop ([20ef85b](https://github.com/kaola-fed/rds-vue/commit/20ef85b8f80c76bc3d5a27b5cb9c3d321663e6c0))
+
 ### [0.0.36](https://github.com/kaola-fed/rds-vue/compare/v0.0.35...v0.0.36) (2020-03-12)
 
 ### [0.0.35](https://github.com/kaola-fed/rds-vue/compare/v0.0.19...v0.0.35) (2020-03-12)
