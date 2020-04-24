@@ -29,6 +29,8 @@ export default class RemoteSelect extends Vue {
 
   @Prop({ default: false }) public multiple!: boolean;
 
+  @Prop({ default: 20 }) public wait!: number;
+
   @Prop() public ajaxFn!: Function;
 
   public selectValue: any = null;
@@ -74,7 +76,7 @@ export default class RemoteSelect extends Vue {
   public created() {
     // 判断是否是函数
 
-    this._getFuzzySource = throttle(this.getFuzzySource.bind(this), 20);
+    this._getFuzzySource = throttle(this.getFuzzySource.bind(this), this.wait);
   }
 
   resolveResponse(response) {
