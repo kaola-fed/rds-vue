@@ -4,6 +4,7 @@ import cascader from './views/cascader.vue';
 import sourceProvider from './views/sourceProvider.vue';
 import upload from './views/upload.vue';
 import authProvider from './views/authProvider.vue';
+import ksSelect from './views/ksSelect.vue';
 
 export default [
   {
@@ -35,5 +36,10 @@ export default [
     name: 'authProvider',
     path: '/authProvider',
     component: authProvider,
+  },
+  {
+    name: 'ksSelect',
+    path: '/ksSelect',
+    component: ksSelect,
   },
 ];

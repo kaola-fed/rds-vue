@@ -165,6 +165,10 @@ export default class KsTreeSelect extends Mixins(SourceProviderMixin) {
     return (this as any).checkedNames.join(',');
   }
 
+  public created() {
+    this.defaultCheckedKeys = Array.from(this.value);
+  }
+
   public customFilter(value) {
     const { store } = (this.$refs.tree as any);
     let resultNum = 0;
