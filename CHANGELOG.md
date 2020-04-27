@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.38](https://github.com/kaola-fed/rds-vue/compare/v0.0.30...v0.0.38) (2020-04-27)
+
+
+### Features
+
+* remoteSelect add wait prop ([20ef85b](https://github.com/kaola-fed/rds-vue/commit/20ef85b8f80c76bc3d5a27b5cb9c3d321663e6c0))
+
+
+### Bug Fixes
+
+* 多选时一旦选中一个值，其他值就只能通过模糊搜索选取 ([61bafa7](https://github.com/kaola-fed/rds-vue/commit/61bafa77985508c77a959acb8f42a8c53c1befe2))
+* 多选状态下，支持value设置为null ([f4088f0](https://github.com/kaola-fed/rds-vue/commit/f4088f0b9344312d98e3594774902a501444a3e4))
+* 搜索后下拉选项不显示全量 ([5210c39](https://github.com/kaola-fed/rds-vue/commit/5210c3992c6b9449401ff39e3e65162e48757b3f))
+* 下拉组件设置limit回显问题修复 ([d7b3577](https://github.com/kaola-fed/rds-vue/commit/d7b3577055fea2228cf8d348978fb007e4ae34bf))
+* 修复数据量大时KsSelect设置limit时的性能问题 ([4cf5238](https://github.com/kaola-fed/rds-vue/commit/4cf52387980d6f362bb73ee2251525abf67efe84))
+
 ### [0.0.37](https://github.com/kaola-fed/rds-vue/compare/v0.0.33...v0.0.37) (2020-04-24)
 
 
