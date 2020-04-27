@@ -8,7 +8,8 @@
         :disabled="disabled"
         :filter-method="onFilterSource"
         @input="onInputFn($event)"
-        @change="onChange($event)">
+        @change="onChange($event)"
+        @clear="onClear($event)">
         <el-option
             v-for="item in limitedSource"
             :key="item[valueKey]"

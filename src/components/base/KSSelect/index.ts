@@ -61,4 +61,8 @@ export default class KsSelect extends Mixins(SourceProviderMixin) {
   onChange(val) {
     this.$emit('change', val);
   }
+
+  onClear(val) {
+    this.filterInput = '';
+  }
 }

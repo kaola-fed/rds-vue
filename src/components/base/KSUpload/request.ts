@@ -55,7 +55,7 @@ export default function upload(option: any) {
     return;
   }
 
-  const readCookie = function (name) {
+  const readCookie = (name) => {
     const match = document.cookie.match(new RegExp(`(^|;\\s*)(${name})=([^;]*)`));
     return (match ? decodeURIComponent(match[3]) : null);
   };
