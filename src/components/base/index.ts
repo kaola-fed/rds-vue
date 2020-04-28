@@ -45,6 +45,8 @@ const install = (Vue: VueConstructor) => {
 
   Vue.prototype.$dialog = $dialog;
 
+  Vue.prototype.$rdsdialog = $dialog;
+
   Vue.prototype.$import = KSImportFile;
 
   Vue.use(VueClipboard);
