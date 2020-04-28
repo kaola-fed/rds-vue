@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.40](https://github.com/kaola-fed/rds-vue/compare/v0.0.39...v0.0.40) (2020-04-28)
+
+
+### Features
+
+* 仓储物流接入统一结算需要修改重名变量 ([0cd4e3d](https://github.com/kaola-fed/rds-vue/commit/0cd4e3de1f182abbb18f996a421c9e9abd9352c5))
+
 ### [0.0.39](https://github.com/kaola-fed/rds-vue/compare/v0.0.38...v0.0.39) (2020-04-27)
 
 ### [0.0.38](https://github.com/kaola-fed/rds-vue/compare/v0.0.30...v0.0.38) (2020-04-27)
